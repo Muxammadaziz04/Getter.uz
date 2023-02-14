@@ -3,7 +3,7 @@
     height: 100vh;
     position: relative;
     background: transparent;
-    
+
     &__title {
         margin: 60px 0;
         position: relative;
@@ -14,12 +14,12 @@
         color: white;
         max-width: 764px;
 
-        & > span{
+        &>span {
             font-family: 'Times';
             font-style: italic;
         }
 
-        &::after{
+        &::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -28,6 +28,22 @@
             width: 263px;
             height: 32px;
             transform: translateY(calc(100% + 10px)) translateX(20%);
+        }
+    }
+
+    &__rowblock {
+        margin: 30px 0;
+
+        &>div {
+            display: flex;
+            align-items: center;
+        }
+
+        &__text{
+            font-size: 32px;
+            line-height: 89px;
+            color: #FFFFFF;
+            font-weight: 400;
         }
     }
 }

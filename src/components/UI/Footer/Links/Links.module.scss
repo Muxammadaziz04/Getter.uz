@@ -1,0 +1,32 @@
+.block {
+    border-top: 1px solid rgba(18, 18, 18, 0.1);
+
+    &>div {
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &:nth-child(2) {
+        background: var(--black-color);
+    }
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    & a {
+        font-size: 14px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &:nth-child(2){
+        gap: 30px;
+    }
+}

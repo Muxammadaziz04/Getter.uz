@@ -12,6 +12,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+  color: var(--black-color);
 }
 
 a {
@@ -35,4 +36,9 @@ h4,
 h5,
 h6{
   margin: 0;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

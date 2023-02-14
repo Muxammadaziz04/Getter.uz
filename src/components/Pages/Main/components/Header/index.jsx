@@ -1,3 +1,4 @@
+import AnimatedBorder from 'components/UI/AnimatedBorder';
 import AnimatedCircle from 'components/UI/AnimatedCircle';
 import Container from 'components/UI/Container';
 import Navbar from 'components/UI/Navbar';
@@ -13,11 +14,11 @@ const Header = () => {
                     <h1 className={cls.header__title}>Создаем сайты и айдентику от всей <span>души</span> </h1>
                 </Container>
             </div>
-            <div className={cls.header__rowblock}>
+            <AnimatedBorder className={cls.header__rowblock}>
                 <Container>
-                    <h3>Давайте обсудим и ваш проект</h3>
+                    <h3 className={cls.header__rowblock__text}>Давайте обсудим и ваш проект</h3>
                 </Container>
-            </div>
+            </AnimatedBorder>
             <AnimatedCircle />
         </div>
     );

@@ -4,8 +4,8 @@
     padding: 20px 0;
     background: transparent;
     position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 10;
-    border: 1px solid rgba(255, 255, 255, 0.2);
 
     &__container{
         display: flex;

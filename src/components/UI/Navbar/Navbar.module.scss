@@ -62,11 +62,18 @@
         color: #121212;
     }
 
-    & svg, & circle{
-        fill: #121212;
+    & svg, & circle, & path{
+        fill: #121212!important;
     }
 
-    .nav__linkgroup{
+    .nav__linkgroup, .nav__btngroup a{
         border: 1px solid #CCCCCC;
     }
+}
+
+.link__active{
+    border-radius: 84px;
+    background: rgba(204, 204, 204, 0.2);
+    position: absolute;
+    transition: all 0.3s;
 }

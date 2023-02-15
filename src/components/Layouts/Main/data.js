@@ -5,7 +5,8 @@ export const navLinks = [
         id: 0,
         link: '/',
         label: 'menu',
-        icon: MenuIcon
+        icon: MenuIcon,
+        active: true
     },
     {
         id: 1,

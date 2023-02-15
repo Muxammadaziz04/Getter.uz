@@ -3,7 +3,7 @@ import FooterLinks from './Links';
 
 const Footer = ({ links = [], contacts = [], infoLinks = [] }) => {
     return (
-        <footer>
+        <footer style={{width: '100%'}}>
             <FooterLinks links={links} contacts={contacts} />
             <FooterInfo />
         </footer>

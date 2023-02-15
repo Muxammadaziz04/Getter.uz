@@ -1,0 +1,10 @@
+
+.tooltip{
+    position: relative;
+
+    & > div:first-child{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+}

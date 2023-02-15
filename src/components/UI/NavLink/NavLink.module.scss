@@ -12,9 +12,13 @@
 }
 
 .active{
-    background: rgba(204, 204, 204, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .border{
     border: 1px solid rgba(18, 18, 18, 0.2);
+}
+
+.white{
+    background: rgba(204, 204, 204, 0.2)!important;
 }

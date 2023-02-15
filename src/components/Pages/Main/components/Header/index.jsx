@@ -27,6 +27,7 @@ const Header = () => {
                         {
                             avatars.length > 0 && avatars.map((ava, index) =>
                                 <Avatar
+                                    key={ava.id}
                                     src={ava.image}
                                     style={{ transform: `translateX(-${index * 14}px)` }}
                                     className={cls.header__ava}

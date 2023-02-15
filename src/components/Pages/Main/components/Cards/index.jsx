@@ -12,6 +12,7 @@ const Cards = () => {
                     {
                         portfolio.length > 0 && portfolio.map(card =>
                             <ProductCard
+                                key={card.id}
                                 image={card.image}
                                 title={card.title}
                                 desc={card.desc}

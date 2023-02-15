@@ -1,12 +1,11 @@
 import { Provider } from 'react-redux';
+import MainLayout from 'components/Layouts/Main';
 import { store } from 'store';
 import { Suspense } from 'react';
 
 import '../styles/globals.scss'
-import MainLayout from 'components/Layouts/Main';
 
 function MyApp({ Component, pageProps }) {
-  console.log(process.env.NODE_ENV);
   return (
     <Provider store={store}>
       <Suspense fallback={<h1>Loading...</h1>}>

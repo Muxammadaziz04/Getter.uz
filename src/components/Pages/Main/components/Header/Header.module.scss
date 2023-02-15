@@ -40,28 +40,120 @@
         &>div {
             display: flex;
             align-items: center;
+            gap: 64px;
         }
 
-        &__text{
+        &__text {
             font-size: 32px;
             line-height: 89px;
             color: #FFFFFF;
             font-weight: 400;
         }
 
-        &__avatars{
+        &__avatars {
             display: flex;
             align-items: center;
         }
     }
 
-    &__ava{
+    &__ava {
         transition: all 0.3s;
-        &:hover{
+
+        &:hover {
             border-width: 5px;
             width: 80px;
             height: 80px;
             z-index: 1000;
         }
     }
+
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        margin-top: auto;
+        width: 100%;
+        position: sticky;
+        top: 0;
+
+        &>div:first-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+
+            & > div{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                
+                & > a{
+                    display: block;
+                    font-size: 11px;
+                    line-height: 14px;
+                    color: rgba(255, 255, 255, 0.4);
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.3s;
+                    gap: 6px;
+    
+                    & > span{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.2);
+                        color: white;
+                    }
+
+                    &:hover{
+                        color: white;
+                    }
+
+                    &:first-child{
+                        margin-right: 134px;
+                    }
+                    &:nth-child(2){
+                        margin-right: 153px;
+                    }
+                }
+            }
+        }
+
+        &>div:nth-child(2) {
+
+            &>div {
+                display: flex;
+                align-items: center;
+
+                & button {
+                    padding: 11px 80px 11px 30px;
+                    color: white;
+                    font-size: 18px;
+                    line-height: 23px;
+                    border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    opacity: 0.5;
+                    transition: all 0.3s;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                    &:first-child{
+                        padding-left: 0;
+                    }
+
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active{
+    opacity: 1;
 }

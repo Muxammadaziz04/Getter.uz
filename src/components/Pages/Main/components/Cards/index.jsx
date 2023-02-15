@@ -1,43 +1,27 @@
 import Container from "components/UI/Container";
 import ProductCard from "components/UI/ProductCard";
 import Flex from "components/UI/Flex";
+import cls from './Cards.module.scss'
+import { portfolio } from "./data";
 
 const Cards = () => {
     return (
-        <Container>
-            <Flex rowCount={5} gap={20} direction='row'>
-                <ProductCard
-                    image='/foto.png'
-                    title='Swiss Dental'
-                    desc='LLC OKS'
-                    link="https://getter.uz/"
-                />
-                <ProductCard
-                    image='/foto.png'
-                    title='Swiss Dental'
-                    desc='LLC OKS'
-                    link="https://getter.uz/"
-                />
-                <ProductCard
-                    image='/foto.png'
-                    title='Swiss Dental'
-                    desc='LLC OKS'
-                    link="https://getter.uz/"
-                />
-                <ProductCard
-                    image='/foto.png'
-                    title='Swiss Dental'
-                    desc='LLC OKS'
-                    link="https://getter.uz/"
-                />
-                <ProductCard
-                    image='/foto.png'
-                    title='Swiss Dental'
-                    desc='LLC OKS'
-                    link="https://getter.uz/"
-                />
-            </Flex>
-        </Container>
+        <div className={cls.wrapper}>
+            <Container>
+                <Flex rowCount={5} gap={20} direction='row'>
+                    {
+                        portfolio.length > 0 && portfolio.map(card =>
+                            <ProductCard
+                                image={card.image}
+                                title={card.title}
+                                desc={card.desc}
+                                link="https://getter.uz/"
+                            />
+                        )
+                    }
+                </Flex>
+            </Container>
+        </div>
     );
 }
 

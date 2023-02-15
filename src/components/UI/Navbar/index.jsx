@@ -12,6 +12,7 @@ const Navbar = ({ links = [], whiteMode = false }) => {
     const router = useRouter()
 
     useEffect(() => {
+        if(router.pathname === '/') return
         const el = document.getElementById(links.find(link => link.link === router.pathname)?.id)
         setSize(getElementSize(el))
     }, [router.pathname, links])
@@ -40,7 +41,7 @@ const Navbar = ({ links = [], whiteMode = false }) => {
                                 </NavLink>
                             )
                         }
-                        {size.x && <div 
+                        {size.x > 0 && <div 
                             className={cls.link__active} 
                             style={{
                                 width: size.width, 

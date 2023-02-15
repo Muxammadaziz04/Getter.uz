@@ -88,7 +88,7 @@ export function FooterLogo() {
     )
 }
 
-export function LikeIcon({fill, onClick = () => {}}) {
+export function LikeIcon({ fill, onClick = () => { } }) {
     return (
         <svg onClick={onClick} width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill={fill} d="M7.24909 12.6528L7.24837 12.6521C5.30729 10.8919 3.7364 9.46452 2.64494 8.12919C1.55898 6.80059 1 5.62437 1 4.375C1 2.33424 2.59055 0.75 4.625 0.75C5.77885 0.75 6.89456 1.28973 7.62058 2.13564L8 2.57771L8.37942 2.13564C9.10544 1.28973 10.2212 0.75 11.375 0.75C13.4095 0.75 15 2.33424 15 4.375C15 5.62437 14.441 6.80059 13.3551 8.12919C12.2636 9.46452 10.6927 10.8919 8.75163 12.6521L8.75091 12.6528L8 13.3363L7.24909 12.6528Z" stroke="white" />
@@ -100,6 +100,22 @@ export function NextArrowIcon() {
     return (
         <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.5 7H15.5M15.5 7C13.25 7 9.125 5.65 9.125 0.25M15.5 7C13.25 7 9.125 8.35 9.125 13.75" stroke="white" />
+        </svg>
+    )
+}
+
+export function RightArrow() {
+    return (
+        <svg width="60" height="46" viewBox="0 0 60 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 23.3545H55.8942M55.8942 23.3545H59C58.0667 23.2806 57.0169 23.2731 55.8942 23.3545ZM55.8942 23.3545C48.0266 23.9252 36.58 28.8613 36.58 45.8647M0 23.375H55.8942M55.8942 23.375H59C58.0667 23.4489 57.0169 23.4564 55.8942 23.375ZM55.8942 23.375C48.0266 22.8043 36.58 17.8682 36.58 0.864746" stroke="white" stroke-width="2" />
+        </svg>
+    )
+}
+
+export function PlusIcon() {
+    return (
+        <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0620001 5.708V4.25H7.694V5.708H0.0620001ZM3.14 0.973999H4.634V8.984H3.14V0.973999Z" fill="white" />
         </svg>
     )
 }

@@ -13,7 +13,7 @@ const SEO = (props) => {
         content="width=device-width, initial-scale=1  maximum-scale=2, user-scalable=0"
       />
       <meta charSet="utf-8" />
-      <title>{title || "Getter"}</title>
+      <title>{title || 'Getter - Центр информационных технологий и инновационных идей'}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
@@ -21,8 +21,10 @@ const SEO = (props) => {
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
       <link rel="manifest" href="/favicon/site.webmanifest" />
       <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-      <meta name="msapplication-TileColor" content="#b11bb8" />
+      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+      <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
 
       {socialTags(props).map(({ name, content }) => {

@@ -20,17 +20,16 @@ const SEO = (props) => {
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
       <link rel="manifest" href="/favicon/site.webmanifest" />
-      <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#255563" />
-      <meta name="apple-mobile-web-app-title" content="Bright Uzbekistan" />
-      <meta name="application-name" content="Bright Uzbekistan" />
-      <meta name="msapplication-TileColor" content="#1a6364" />
+      <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+      <meta name="msapplication-TileColor" content="#b11bb8" />
+      <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
       <meta name="theme-color" content="#ffffff" />
 
       {socialTags(props).map(({ name, content }) => {
         return <meta key={name} property={name} content={content} />;
       })}
-      <meta property="og:image:width" content="1200"/>
-      <meta property="og:image:height" content="630"/>
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
     </Head>
   );
 };

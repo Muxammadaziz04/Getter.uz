@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Container from '../Container';
@@ -11,10 +11,10 @@ const Navbar = ({ links = [], whiteMode = false }) => {
     const [size, setSize] = useState({width: 0, height: 0, x: 0, y: 0})
     const router = useRouter()
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const el = document.getElementById(links.find(link => link.link === router.pathname)?.id)
         setSize(getElementSize(el))
-    }, [router.pathname])
+    }, [router.pathname, links])
 
     return (
         <nav className={`${cls.nav} ${whiteMode ? cls.whiteMode : ''}`}>

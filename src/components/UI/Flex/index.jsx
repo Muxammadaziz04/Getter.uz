@@ -4,18 +4,17 @@ const Wrapper = styled('div')`
     display: flex;
     width: ${props => props.width ?? '100%'};
     heigth: ${props => props.height ?? '100%'};
-    flex-direction: ${props => props.direction ?? 'row'};
+    padding: ${props => props.padding ?? '0'};
+    flex-direction: ${props => props.direction ?? 'row'} !important;
     align-items: ${props => props.alignItems ?? 'stretch'};
     justify-content: ${props => props.justifyContent ?? 'flex-start'};
     gap: ${props => props.gap ?? '12'}px;
     flex-wrap: ${props => props.wrap ?? 'wrap'};
-
     & > *{
         max-width: ${props => props.direction === 'row' 
         ? `calc((100% - ${props.gap * (props.rowCount ?? 3 - 1)}px) / ${props.rowCount ?? 3})` 
         : props.cardWidth || '100%'};
     }
-
     ${props => props.mediaQuery}
 `;
 

@@ -1,11 +1,11 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import AnimatedBorder from 'components/UI/AnimatedBorder';
 import AnimatedCircle from 'components/UI/AnimatedCircle';
 import Avatar from 'components/UI/Avatar';
 import Container from 'components/UI/Container';
 import { PlusIcon, RightArrow } from 'components/UI/icons';
 import Navbar from 'components/UI/Navbar';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { navLinks } from '../../../../Layouts/Main/data';
 import { avatars } from './data';
 import cls from './Header.module.scss'
@@ -29,8 +29,14 @@ const Header = () => {
                                 <Avatar
                                     key={ava.id}
                                     src={ava.image}
+                                    fullName={ava.fullName}
+                                    job={ava.job}
                                     style={{ transform: `translateX(-${index * 14}px)` }}
+                                    data-index={index}
+                                    index={index}
                                     className={cls.header__ava}
+                                    onMouseEnter={(e) => e.target.closest('div').style = `transform: translateX(-${index * 14}px) scale(1.3);`}
+                                    onMouseLeave={(e) => e.target.closest('div').style = `transform: translateX(-${index * 14}px);`}
                                 />
                             )
                         }

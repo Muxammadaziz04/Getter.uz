@@ -11,10 +11,14 @@ const Navbar = ({ links = [], whiteMode = false }) => {
     const [size, setSize] = useState({width: 0, height: 0, x: 0, y: 0})
     const router = useRouter()
 
-    useEffect(() => {
-        if(router.pathname === '/') return
+    const func = () => {
+        if(router.pathname === '/') setSize({width: 0, height: 0, x: 0, y: 0})
         const el = document.getElementById(links.find(link => link.link === router.pathname)?.id)
         setSize(getElementSize(el))
+    }
+
+    useEffect(() => {
+        func()
     }, [router.pathname, links])
 
     return (
@@ -35,6 +39,8 @@ const Navbar = ({ links = [], whiteMode = false }) => {
                                     active={link.active}
                                     whiteMode={whiteMode}
                                     id={link.id}
+                                    onMouseOver={(el) => setSize(getElementSize(el.target))}
+                                    onMouseLeave={func}
                                 >
                                     {typeof link.icon === 'function' && link.icon()}
                                     {link.label}

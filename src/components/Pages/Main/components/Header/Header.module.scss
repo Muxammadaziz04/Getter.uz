@@ -36,11 +36,26 @@
 
     &__rowblock {
         margin: 30px 0;
+        position: relative;
+        z-index: 100;
 
         &>div {
             display: flex;
             align-items: center;
             gap: 64px;
+
+            &>div:nth-child(3) {
+                transform: translateX(-200%);
+                -webkit-transition: -webkit-transform 0.5s ease;
+                -moz-transition: -moz-transform 0.5s ease;
+                -o-transition: -o-transform 0.5s ease;
+                transition: transform 0.5s ease, top 0.5s ease;
+                cursor: pointer;
+
+                &:hover {
+                    transform: translateX(-170%);
+                }
+            }
         }
 
         &__text {
@@ -60,9 +75,9 @@
         transition: all 0.3s;
 
         &:hover {
-            border-width: 5px;
-            width: 80px;
-            height: 80px;
+            border: 2px solid #ffffff;
+            // width: 80px;
+            // height: 80px;
             z-index: 1000;
         }
     }
@@ -82,13 +97,13 @@
             display: flex;
             align-items: center;
 
-            & > div{
+            &>div {
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                
-                & > a{
+
+                &>a {
                     display: block;
                     font-size: 11px;
                     line-height: 14px;
@@ -97,8 +112,8 @@
                     align-items: center;
                     transition: all 0.3s;
                     gap: 6px;
-    
-                    & > span{
+
+                    &>span {
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -109,14 +124,15 @@
                         color: white;
                     }
 
-                    &:hover{
+                    &:hover {
                         color: white;
                     }
 
-                    &:first-child{
+                    &:first-child {
                         margin-right: 134px;
                     }
-                    &:nth-child(2){
+
+                    &:nth-child(2) {
                         margin-right: 153px;
                     }
                 }
@@ -141,11 +157,12 @@
                     &:last-child {
                         border-right: none;
                     }
-                    &:first-child{
+
+                    &:first-child {
                         padding-left: 0;
                     }
 
-                    &:hover{
+                    &:hover {
                         opacity: 1;
                     }
                 }
@@ -154,6 +171,6 @@
     }
 }
 
-.active{
+.active {
     opacity: 1;
 }

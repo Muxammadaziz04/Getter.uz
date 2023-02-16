@@ -15,7 +15,7 @@ const About = () => {
                                 души
                             </span>
                         </h2>
-                        <div style={{width: '888px', height: '339px', position: 'relative'}}>
+                        <div style={{ width: '888px', height: '339px', position: 'relative' }}>
                             <Image
                                 src={'/about-us.png'}
                                 layout='fill'
@@ -38,7 +38,7 @@ const About = () => {
                             </p>
                         </div>
 
-                        <div style={{width: '100%', height: '770px', position: 'relative'}}>
+                        <div style={{ width: '100%', height: '770px', position: 'relative' }}>
                             <Image
                                 src={'/about-us-banner.png'}
                                 layout='fill'
@@ -98,187 +98,196 @@ const About = () => {
 
                 <section className='about-call'>
                     <div className="container">
-                        <h3 className='about-call__heading'>
-                            <span className='about-call__note'>
-                                Позвони
-                                <span className='about-call__send'>
-                                    <span
-                                        className='about-call__profile-wrapper'>
-                                        <span className='about-call__profile'>
-                                        <div style={{width: '32px', height: '32px', position: "relative",}}>
-                                                <Image
-                                                    src='/avatars/shaxriyor_oripov.png'
-                                                    layout="fill"
-                                                    objectFit="cover"
-                                                />
-                                            </div>
-                                            <span className='about-call__hover-profile '  style={{marginLeft: '6px'}}>
-                                                <div className='about-call__hover-display'>
-                                                    <div className='about-call__hover-about'>
-                                                        <div className='about-call__hover-name'>
-                                                            <h4>
-                                                                Shaxriyor Oripov
-                                                            </h4>
-                                                            <p>
-                                                                5min
-                                                            </p>
-                                                        </div>
-                                                        <p className='about-call__hover-desc'>
-                                                            Че там с проектом?
-                                                        </p>
+                        <div className="btn_group">
+                            <div>
+                                <h3 className='about-call__heading'>
+                                    <span className='about-call__note'>
+                                        Позвони
+                                        <span className='about-call__send'>
+                                            <span
+                                                className='about-call__profile-wrapper'>
+                                                <span className='about-call__profile'>
+                                                    <div style={{ width: '32px', height: '32px', position: "relative", }}>
+                                                        <Image
+                                                            src='/avatars/shaxriyor_oripov.png'
+                                                            layout="fill"
+                                                            objectFit="cover"
+                                                        />
                                                     </div>
-                                                </div>
-                                            </span>
-                                        </span>
-
-                                    </span>
-                                    <span
-                                        className='about-call__profile-wrapper'>
-                                        <span className='about-call__profile'>
-                                        <div style={{width: '32px', height: '32px', position: "relative",}}>
-                                                <Image
-                                                    src='/avatars/shaxriyor_oripov.png'
-                                                    layout="fill"
-                                                    objectFit="cover"
-                                                />
-                                            </div>
-                                            <span className='about-call__hover-profile ' style={{marginLeft: '6px'}}>
-                                                <div className='about-call__hover-display'>
-                                                    <div className='about-call__hover-about'>
-                                                        <div className='about-call__hover-name'>
-                                                            <h4>
-                                                                Shaxriyor Oripov
-                                                            </h4>
-                                                            <p>
-                                                                5min
-                                                            </p>
+                                                    <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
+                                                        <div className='about-call__hover-display'>
+                                                            <div className='about-call__hover-about'>
+                                                                <div className='about-call__hover-name'>
+                                                                    <h4>
+                                                                        Shaxriyor Oripov
+                                                                    </h4>
+                                                                    <p>
+                                                                        5min
+                                                                    </p>
+                                                                </div>
+                                                                <p className='about-call__hover-desc'>
+                                                                    Че там с проектом?
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                        <p className='about-call__hover-desc'>
-                                                            Че там с проектом?
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </span>
-                                        </span>
+                                                    </span>
+                                                </span>
 
-                                    </span>
-                                    <span
-                                        className='about-call__profile-wrapper'>
-                                        <span className='about-call__profile'>
-                                        <div style={{width: '32px', height: '32px', position: "relative",}}>
-                                                <Image
-                                                    src='/avatars/shaxriyor_oripov.png'
-                                                    layout="fill"
-                                                    objectFit="cover"
-                                                />
-                                            </div>
-                                            <span className='about-call__hover-profile ' style={{marginLeft: '6px'}}>
-                                                <div className='about-call__hover-display'>
-                                                    <div className='about-call__hover-about'>
-                                                        <div className='about-call__hover-name'>
-                                                            <h4>
-                                                                Shaxriyor Oripov
-                                                            </h4>
-                                                            <p>
-                                                                5min
-                                                            </p>
+                                            </span>
+                                            <span
+                                                className='about-call__profile-wrapper'>
+                                                <span className='about-call__profile'>
+                                                    <div style={{ width: '32px', height: '32px', position: "relative", }}>
+                                                        <Image
+                                                            src='/avatars/shaxriyor_oripov.png'
+                                                            layout="fill"
+                                                            objectFit="cover"
+                                                        />
+                                                    </div>
+                                                    <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
+                                                        <div className='about-call__hover-display'>
+                                                            <div className='about-call__hover-about'>
+                                                                <div className='about-call__hover-name'>
+                                                                    <h4>
+                                                                        Shaxriyor Oripov
+                                                                    </h4>
+                                                                    <p>
+                                                                        5min
+                                                                    </p>
+                                                                </div>
+                                                                <p className='about-call__hover-desc'>
+                                                                    Че там с проектом?
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                        <p className='about-call__hover-desc'>
-                                                            Че там с проектом?
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </span>
-                                        </span>
+                                                    </span>
+                                                </span>
 
-                                    </span>
-                                    <span
-                                        className='about-call__profile-wrapper'>
-                                        <span className='about-call__profile'>
-                                        <div style={{width: '32px', height: '32px', position: "relative",}}>
-                                                <Image
-                                                    src='/avatars/shaxriyor_oripov.png'
-                                                    layout="fill"
-                                                    objectFit="cover"
-                                                />
-                                            </div>
-                                            <span className='about-call__hover-profile ' style={{marginLeft: '6px'}}>
-                                                <div className='about-call__hover-display'>
-                                                    <div className='about-call__hover-about'>
-                                                        <div className='about-call__hover-name'>
-                                                            <h4>
-                                                                Shaxriyor Oripov
-                                                            </h4>
-                                                            <p>
-                                                                5min
-                                                            </p>
+                                            </span>
+                                            <span
+                                                className='about-call__profile-wrapper'>
+                                                <span className='about-call__profile'>
+                                                    <div style={{ width: '32px', height: '32px', position: "relative", }}>
+                                                        <Image
+                                                            src='/avatars/shaxriyor_oripov.png'
+                                                            layout="fill"
+                                                            objectFit="cover"
+                                                        />
+                                                    </div>
+                                                    <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
+                                                        <div className='about-call__hover-display'>
+                                                            <div className='about-call__hover-about'>
+                                                                <div className='about-call__hover-name'>
+                                                                    <h4>
+                                                                        Shaxriyor Oripov
+                                                                    </h4>
+                                                                    <p>
+                                                                        5min
+                                                                    </p>
+                                                                </div>
+                                                                <p className='about-call__hover-desc'>
+                                                                    Че там с проектом?
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                        <p className='about-call__hover-desc'>
-                                                            Че там с проектом?
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </span>
-                                        </span>
+                                                    </span>
+                                                </span>
 
-                                    </span>
-                                    <span
-                                        className='about-call__profile-wrapper'>
-                                        <span className='about-call__profile'>
-                                            <div style={{width: '32px', height: '32px', position: "relative",}}>
-                                                <Image
-                                                    src='/avatars/shaxriyor_oripov.png'
-                                                    layout="fill"
-                                                    objectFit="cover"
-                                                />
-                                            </div>
-                                            {/* <img src={callProfile} alt="" /> */}
-                                            <span className='about-call__hover-profile ' style={{marginLeft: '6px'}}>
-                                                <div className='about-call__hover-display'>
-                                                    <div className='about-call__hover-about'>
-                                                        <div className='about-call__hover-name' style={{marginRight: '6px'}}>
-                                                            <h4>
-                                                                Shaxriyor Oripov
-                                                            </h4>
-                                                            <p>
-                                                                5min
-                                                            </p>
+                                            </span>
+                                            <span
+                                                className='about-call__profile-wrapper'>
+                                                <span className='about-call__profile'>
+                                                    <div style={{ width: '32px', height: '32px', position: "relative", }}>
+                                                        <Image
+                                                            src='/avatars/shaxriyor_oripov.png'
+                                                            layout="fill"
+                                                            objectFit="cover"
+                                                        />
+                                                    </div>
+                                                    <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
+                                                        <div className='about-call__hover-display'>
+                                                            <div className='about-call__hover-about'>
+                                                                <div className='about-call__hover-name'>
+                                                                    <h4>
+                                                                        Shaxriyor Oripov
+                                                                    </h4>
+                                                                    <p>
+                                                                        5min
+                                                                    </p>
+                                                                </div>
+                                                                <p className='about-call__hover-desc'>
+                                                                    Че там с проектом?
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                        <p className='about-call__hover-desc'>
-                                                            Че там с проектом?
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                                    </span>
+                                                </span>
+
                                             </span>
+                                            <span
+                                                className='about-call__profile-wrapper'>
+                                                <span className='about-call__profile'>
+                                                    <div style={{ width: '32px', height: '32px', position: "relative", }}>
+                                                        <Image
+                                                            src='/avatars/shaxriyor_oripov.png'
+                                                            layout="fill"
+                                                            objectFit="cover"
+                                                        />
+                                                    </div>
+                                                    {/* <img src={callProfile} alt="" /> */}
+                                                    <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
+                                                        <div className='about-call__hover-display'>
+                                                            <div className='about-call__hover-about'>
+                                                                <div className='about-call__hover-name' style={{ marginRight: '6px' }}>
+                                                                    <h4>
+                                                                        Shaxriyor Oripov
+                                                                    </h4>
+                                                                    <p>
+                                                                        5min
+                                                                    </p>
+                                                                </div>
+                                                                <p className='about-call__hover-desc'>
+                                                                    Че там с проектом?
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </span>
+                                                </span>
+
+                                            </span>
+
                                         </span>
-
                                     </span>
+                                    обсудим и твой
+                                    <span className='about-it__heading-span'>
+                                        проект
+                                    </span>
+                                </h3>
 
-                                </span>
-                            </span>
-                            обсудим и твой
-                            <span className='about-it__heading-span'>
-                                проект
-                            </span>
-                        </h3>
-
-                        <div className='about-call__links'>
-                            <div className='about-call__link-wrap'>
-                                <a
-                                    className='about-call__link'
-                                    href="tel:+998951224472">
-                                    <PhoneIcon />
-                                    +998 95 122 44 72
-                                </a>
-                                <a className='about-call__link' href="mailto:hello@getter.com">
-                                    <MailIcon />
-                                    hello@getter.com
-                                </a>
+                                <div className='about-call__links'>
+                                    <div className='about-call__link-wrap'>
+                                        <a
+                                            className='about-call__link'
+                                            href="tel:+998951224472">
+                                            <PhoneIcon />
+                                            +998 95 122 44 72
+                                        </a>
+                                        <a className='about-call__link' href="mailto:hello@getter.com">
+                                            <MailIcon />
+                                            hello@getter.com
+                                        </a>
+                                    </div>
+                                    <a className='about-call__link' href="https://goo.gl/maps/RKNFZ4hK2pBC5jWx6" target='_blank' rel='noreferrer'>
+                                        <LocationIcon />
+                                        Buyuk Ipakyoli, orientir-Parkentskiy evos
+                                    </a>
+                                </div>
                             </div>
-                            <a className='about-call__link' href="https://goo.gl/maps/RKNFZ4hK2pBC5jWx6">
-                                <LocationIcon />
-                                Buyuk Ipakyoli, orientir-Parkentskiy evos
-                            </a>
+                            <div className='btn_group_child'>
+                                <button>Пора заказать</button>
+                                <button>проект</button>
+                                <button>от Getter</button>
+                            </div>
                         </div>
 
                         <div>

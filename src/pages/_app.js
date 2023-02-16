@@ -4,6 +4,7 @@ import { store } from 'store';
 import { Suspense } from 'react';
 
 import '../styles/globals.scss'
+import '../components/Pages/About/About.scss'
 
 function MyApp({ Component, pageProps }) {
   return (

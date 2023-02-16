@@ -15,25 +15,25 @@ const Header = () => {
     const router = useRouter()
     const [colorChanget, setColorChanget] = useState(false)
     const query = router?.asPath.split('?')?.[1]?.split('=')?.[1]
-    console.log(query);
+
     useEffect(() => {
-      if(typeof window !== 'undefined'){
-        const handleScroll = () => {
-            const vh = window.innerHeight
-            if(vh - 82 <= window.scrollY){
-                setColorChanget(true)
-            } else {
-                setColorChanget(false)
+        if (typeof window !== 'undefined') {
+            const handleScroll = () => {
+                const vh = window.innerHeight
+                if (vh - 82 <= window.scrollY) {
+                    setColorChanget(true)
+                } else {
+                    setColorChanget(false)
+                }
             }
+            window.addEventListener('scroll', handleScroll)
+            return () => window.removeEventListener('scroll', handleScroll)
         }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-      }
     }, []);
 
     return (
         <>
-            <div  className={cls.wrapper}>
+            <div className={cls.wrapper}>
                 <div className={cls.header}>
                     <Navbar links={navLinks} />
                     <div>
@@ -66,9 +66,7 @@ const Header = () => {
                             </div>
                         </Container>
                     </AnimatedBorder>
-                    <div style={{width: '100%', height: '100%', overflow: 'hidden', position: 'absolute'}}>
                     <AnimatedCircle />
-                    </div>
                 </div>
             </div>
             <div className={`${cls.header__btns} ${colorChanget ? cls.active__nav : ''}`}>
@@ -97,19 +95,19 @@ const Header = () => {
                 <div>
                     <Container>
                         <button
-                            style={query === 'populated-sites' ? {opacity: 1} : {}}
+                            style={query === 'populated-sites' ? { opacity: 1 } : {}}
                             onClick={() => router.push('', '?cards=populated-sites', { scroll: false })}
                         >
                             Популярные сайты
                         </button>
                         <button
-                            style={query === 'portfolio' ? {opacity: 1} : {}}
+                            style={query === 'portfolio' ? { opacity: 1 } : {}}
                             onClick={() => router.push('', '?cards=portfolio', { scroll: false })}
                         >
                             Наше портфолио
                         </button>
                         <button
-                            style={query === 'articles' ? {opacity: 1} : {}}
+                            style={query === 'articles' ? { opacity: 1 } : {}}
                             onClick={() => router.push('', '?cards=articles', { scroll: false })}
                         >
                             Статьи

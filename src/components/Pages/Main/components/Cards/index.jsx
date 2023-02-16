@@ -8,7 +8,7 @@ const Cards = () => {
     return (
         <div className={cls.wrapper}>
             <Container>
-                <Flex rowCount={5} gap={20} direction='row'>
+                <Flex rowCount={4} gap={20} direction='row'>
                     {
                         portfolio.length > 0 && portfolio.map(card =>
                             <ProductCard

@@ -53,10 +53,9 @@ const Header = () => {
                                             fullName={ava.fullName}
                                             job={ava.job}
                                             style={{ transform: `translateX(-${index * 14}px)` }}
-                                            data-index={index}
                                             className={cls.header__ava}
                                             onMouseEnter={(e) => e.target.closest('div').style = `transform: translateX(-${index * 14}px) scale(1.3);`}
-                                            onMouseLeave={(e) => e.target.closest('div').style = `transform: translateX(-${index * 14}px);`}
+                                            onMouseLeave={(e) => e.target.closest('div.ava').style = `transform: translateX(-${index * 14}px);`}
                                         />
                                     )
                                 }

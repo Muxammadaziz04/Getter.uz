@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import cls from './Avatar.module.scss'
 
-const Avatar = ({src = '', alt = 'avatar', className, fullName, job, onMouseEnter, ...other}) => {
+const Avatar = ({src = '', alt = 'avatar', className, fullName, job, onMouseEnter, onMouseLeave, ...other}) => {
     return (
-        <div className={`${cls.ava} ${className}`} onMouseEnter={onMouseEnter} {...other}>
+        <div className={`${cls.ava} ${className} ava`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} {...other}>
             <Image 
                 src={src}
                 layout='fill'

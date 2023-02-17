@@ -1,7 +1,7 @@
 export const sidebarBtns = [
     {
         id: 0,
-        label: 'Интерфейсы',
+        label: 'Дизайн интерфейсов(Ui)',
         link: ''
     },
     {
@@ -21,43 +21,58 @@ export const sidebarBtns = [
     },
     {
         id: 4,
-        label: 'Типографика',
+        label: 'График дизайн',
         link: ''
     },
     {
         id: 5,
-        label: 'Цвет',
+        label: 'Frontend программирование',
         link: ''
     },
 
     {
         id: 6,
-        label: 'Брендинг',
+        label: 'Backend программирование',
         link: ''
     },
     {
         id: 7,
-        label: 'Практика',
+        label: 'Маркетинг',
         link: ''
     },
     {
         id: 8,
-        label: 'Карьера',
+        label: 'Маркетплейсы',
         link: ''
     },
     {
         id: 9,
-        label: 'Тренды',
+        label: 'Игры',
         link: ''
     },
     {
         id: 10,
-        label: 'Полезное',
+        label: 'Кино и Музыка',
         link: ''
     },
     {
         id: 11,
-        label: 'Разное',
+        label: 'Цвет',
+        link: ''
+    },
+    {
+        id: 11,
+        label: 'Брендинг',
+        link: ''
+    },
+    {
+        id: 11,
+        label: 'Тренды',
+        link: ''
+    },
+    {
+        id: 11,
+        label: 'Мобильное приложение',
         link: ''
     },
 ]

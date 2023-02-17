@@ -2,7 +2,7 @@ import Cards from './components/Cards';
 import Header from './components/Header';
 import cls from './Main.module.scss'
 
-const MainPage = () => {
+const Main = () => {
     return (
         <div className={cls.main}>
             <Header />
@@ -11,4 +11,4 @@ const MainPage = () => {
     );
 }
 
-export default MainPage;
+export default Main;

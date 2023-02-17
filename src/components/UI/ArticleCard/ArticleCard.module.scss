@@ -1,0 +1,102 @@
+.card {
+    display: flex;
+    gap: 37px;
+
+    &__content {
+        flex-grow: 1;
+        border-bottom: 1px solid #CCCCCC;
+        padding-top: 31px;
+        padding-bottom: 22px;
+        display: flex;
+        flex-direction: column ;
+
+        &__hashtags {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 12px;
+        }
+
+        &__title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 34px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+                    line-clamp: 3; 
+            -webkit-box-orient: vertical;
+        }
+
+        &__info{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+
+            &__data{
+                display: flex;
+                gap: 10px;
+    
+                & > span{
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    font-size: 14px;
+                    line-height: 18px;
+    
+                    & > svg > path{
+                        stroke: var(--black-color);
+                    }
+                }
+            }
+        }
+
+        &__profile{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            &__ava{
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 1px solid #7A7382;
+                background: #7A7382;
+                position: relative;
+            }
+
+            &__info{
+                display: flex;
+                flex-direction: column;
+                & > h4{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin-bottom: 1px;
+                }
+
+                & > span{
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
+
+                    color: #0038FF;
+                }
+            }
+
+        }
+    }
+
+    &__img {
+        max-width: 326px;
+        min-width: 326px;
+        width: 100%;
+        aspect-ratio: 163/125;
+        position: relative;
+    }
+}

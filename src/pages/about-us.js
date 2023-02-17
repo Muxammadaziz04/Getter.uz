@@ -2,7 +2,7 @@ import About from 'components/Pages/About';
 import SEO from 'components/SEO';
 import React from 'react';
 
-const AboutUs = () => {
+const AboutUsPage = () => {
     return (
         <>
          <SEO />
@@ -11,4 +11,4 @@ const AboutUs = () => {
     );
 }
 
-export default AboutUs;
+export default AboutUsPage;

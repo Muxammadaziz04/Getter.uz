@@ -1,12 +1,12 @@
-import MainPage from "components/Pages/Main";
+import Main from "components/Pages/Main";
 import SEO from "components/SEO";
 
-export default function Home() {
+export default function HomePage() {
 
   return (
     <>
       <SEO />
-      <MainPage />
+      <Main />
     </>
   )
 }

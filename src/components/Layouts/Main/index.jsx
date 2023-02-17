@@ -6,6 +6,7 @@ import cls from './Main.module.scss'
 
 const MainLayout = ({children}) => {
     const router = useRouter()
+    
     return (
         <div className={cls.main}>
             {router.pathname !== '/' && <Navbar links={navLinks} whiteMode={true}/>}

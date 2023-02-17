@@ -1,11 +1,13 @@
-import React from 'react';
+import Articles from 'components/Pages/Articles';
+import SEO from 'components/SEO';
 
-const Articles = () => {
+const ArticlesPage = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <SEO />
+            <Articles />
+        </>            
     );
 }
 
-export default Articles;
+export default ArticlesPage;

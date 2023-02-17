@@ -18,6 +18,7 @@ const Content = () => {
                     comments={atc.comments}
                     date={atc.comments}
                     hashtags={atc.hashtags}
+                    id={atc.id}
                 />    
             )
            }

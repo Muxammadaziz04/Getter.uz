@@ -304,19 +304,33 @@
         }
         &__card {
             width: 640px;
+            height: 210px;
             background-color: #F5F5F5;
             border-radius: 20px;
-            padding: 50px 40px;
+            padding: 30px 40px;
             margin-right: 30px;
             margin-bottom: 20px;
             flex-grow: 1;
         }
         &__card h4 {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 21px;
+            width: 363px!important;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
             margin-bottom: 35px;
             max-width: 300px;
+            margin: 0;
+            margin-bottom: 21px;
+        }
+
+        &__card button{
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 10px 13px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            color: #009CCA;
         }
         &__card div {
             display: flex;

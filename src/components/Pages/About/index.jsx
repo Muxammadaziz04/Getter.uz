@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Container from "components/UI/Container";
-import { LocationIcon, MailIcon, PhoneIcon } from "components/UI/icons"
+import { LocationIcon, MailIcon, PhoneIcon, TelegramIcon } from "components/UI/icons"
 
 const About = () => {
     return (
@@ -336,8 +336,11 @@ const About = () => {
                                 </div>
                                 <div className="about-call__card">
                                     <h4>
-                                        Бесплатный онлайн тест  для подготовки к президентским школам
+                                        Хотите вступить в наши ряды, у нас для вас есть открытые вакансии
                                     </h4>
+                                    <button>
+                                        <TelegramIcon /> HR Telegram
+                                    </button>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 
 .page{
     flex-grow: 1;
+
     & > div{
         display: flex;
         max-height: 100vh;
@@ -8,8 +9,8 @@
         align-items: stretch;
     }
 
-    &__sidebar{
-        max-width: 288px;
+    &__aside{
+        max-width: 506px;
         width: 100%;
         max-height: 100%;
         height: auto;

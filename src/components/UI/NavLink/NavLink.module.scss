@@ -22,3 +22,11 @@
 .white{
     background: rgba(204, 204, 204, 0.2)!important;
 }
+
+.menu{
+    background: white!important;
+    color: #7000FF!important;
+    & > svg > circle{
+        fill: #7000FF!important;
+    }
+}

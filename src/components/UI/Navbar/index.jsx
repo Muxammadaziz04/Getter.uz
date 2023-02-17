@@ -39,6 +39,7 @@ const Navbar = ({ links = [], whiteMode = false }) => {
                                         key={link.id}
                                         href={link.link}
                                         active={link.active}
+                                        label={link.label}
                                         whiteMode={whiteMode}
                                         id={link.id}
                                         onMouseOver={(el) => setSize(getElementSize(el.target))}

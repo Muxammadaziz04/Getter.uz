@@ -1,7 +1,7 @@
 import Link from "next/link";
 import cls from './NavLink.module.scss'
 
-const NavLink = ({ children, href, active, withBorder, whiteMode = false, ...other }) => {
+const NavLink = ({ children, href, label = '', active, withBorder, whiteMode = false, ...other }) => {
     return (
         <Link href={href}>
             <a
@@ -9,6 +9,7 @@ const NavLink = ({ children, href, active, withBorder, whiteMode = false, ...oth
                     ${cls.link} 
                     ${active ? cls.active : ''} 
                     ${withBorder ? cls.border : ''} 
+                    ${label === 'menu' ? cls.menu : ''}
                     ${whiteMode && active ? cls.white : ""}`
                 }
                 {...other}

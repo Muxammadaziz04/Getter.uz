@@ -1,0 +1,16 @@
+
+.btn{
+    width: 48px;
+    height: 48px;
+    background: #F3F3F3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > svg, & > svg > path{
+        width: 16px!important;
+        height: 16px!important;
+        display: block;
+    }
+}

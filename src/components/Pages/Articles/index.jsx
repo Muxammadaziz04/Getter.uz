@@ -1,4 +1,4 @@
-import Sidebar from './components/Sidebar';
+import Sidebar from '../../UI/Sidebar';
 import Container from 'components/UI/Container';
 import Content from './components/Content';
 import { sidebarBtns } from './data';

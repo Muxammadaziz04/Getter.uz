@@ -1,4 +1,4 @@
-import SidebarButton from '../SidebarButton';
+import SidebarButton from '../../Pages/Articles/components/SidebarButton';
 import cls from './Sidebar.module.scss'
 
 const Sidebar = ({ buttons = [] }) => {

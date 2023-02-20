@@ -3,5 +3,58 @@
     display: flex;
     gap: 7px;
     align-items: flex-start;
+    border-bottom: 1px solid #CCCCCC;
+
+    &__content{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        &__hashtags{
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        &__title{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 36px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+                    line-clamp: 2; 
+            -webkit-box-orient: vertical;
+        }
+
+        &__data{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+
+            & > span{
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 14px;
+                line-height: 18px;
+
+                & > svg > path{
+                    stroke: var(--black-color);
+                }
+            }
+        }
+    }
     
+    &__img{
+        max-width: 105px;
+        width: 100%;
+        aspect-ratio: 35/27;
+        position: relative;
+    }
 }

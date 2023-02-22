@@ -200,3 +200,76 @@ export function LargiLikeIcon() {
 
     )
 }
+
+export function BlackInstagramIcon() {
+    return (
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1H5C2.79086 1 1 2.79086 1 5V13C1 15.2091 2.79086 17 5 17H13C15.2091 17 17 15.2091 17 13V5C17 2.79086 15.2091 1 13 1Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9 12C10.6569 12 12 10.6569 12 9C12 7.34315 10.6569 6 9 6C7.34315 6 6 7.34315 6 9C6 10.6569 7.34315 12 9 12Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+export function BlackFacebookIcon() {
+    return (
+        <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 8V12H4V19H8V12H11L12 8H8V6C8 5.73478 8.10536 5.48043 8.29289 5.29289C8.48043 5.10536 8.73478 5 9 5H12V1H9C7.67392 1 6.40215 1.52678 5.46447 2.46447C4.52678 3.40215 4 4.67392 4 6V8H1Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+export function BlackTwitterIcon() {
+    return (
+        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 2.01001C20 2.50001 19.02 2.69901 18 3.00001C16.879 1.73501 15.217 1.66501 13.62 2.26301C12.023 2.86101 10.977 4.32301 11 6.00001V7.00001C7.755 7.08301 4.865 5.60501 3 3.00001C3 3.00001 -1.182 10.433 7 14C5.128 15.247 3.261 16.088 1 16C4.308 17.803 7.913 18.423 11.034 17.517C14.614 16.477 17.556 13.794 18.685 9.77501C19.0218 8.55268 19.189 7.28987 19.182 6.02201C19.18 5.77301 20.692 3.25001 21 2.00901V2.01001Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+export function BlackTelegramIcon() {
+    return (
+        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 7L9 11L15 17L19 1L1 8L5 10L7 16L10 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+export function HomeIcon() {
+    return (
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 7L11 12V19M6 7L1 12V19H6M6 7V19M11 19H6M11 19H19V2C19 1.73478 18.8946 1.48043 18.7071 1.29289C18.5196 1.10536 18.2652 1 18 1H8C7.73478 1 7.48043 1.10536 7.29289 1.29289C7.10536 1.48043 7 1.73478 7 2V8M11 5V5.01M15 5V5.01M15 9V9.01M15 13V13.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+export function UploadIcon() {
+    return (
+        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 14V16C1 16.5304 1.21071 17.0391 1.58579 17.4142C1.96086 17.7893 2.46957 18 3 18H15C15.5304 18 16.0391 17.7893 16.4142 17.4142C16.7893 17.0391 17 16.5304 17 16V14M4 6L9 1M9 1L14 6M9 1V13" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+export function UserIcon() {
+    return (
+        <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 19V17C1 15.9391 1.42143 14.9217 2.17157 14.1716C2.92172 13.4214 3.93913 13 5 13H9C10.0609 13 11.0783 13.4214 11.8284 14.1716C12.5786 14.9217 13 15.9391 13 17V19M11 5C11 7.20914 9.20914 9 7 9C4.79086 9 3 7.20914 3 5C3 2.79086 4.79086 1 7 1C9.20914 1 11 2.79086 11 5Z" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+export function BlackPhoneIcon() {
+    return (
+        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 1H7L9 6L6.5 7.5C7.57096 9.67153 9.32847 11.429 11.5 12.5L13 10L18 12V16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C12.0993 17.763 8.42015 16.1065 5.65683 13.3432C2.8935 10.5798 1.23705 6.90074 1 3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1Z" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+export function LinkIcon() {
+    return (
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.00037 12.0004C8.32624 12.333 8.71521 12.5972 9.14449 12.7776C9.57377 12.958 10.0347 13.0509 10.5004 13.0509C10.966 13.0509 11.427 12.958 11.8562 12.7776C12.2855 12.5972 12.6745 12.333 13.0004 12.0004L17.0004 8.00038C17.6634 7.33734 18.0359 6.43806 18.0359 5.50038C18.0359 4.5627 17.6634 3.66342 17.0004 3.00038C16.3373 2.33734 15.438 1.96484 14.5004 1.96484C13.5627 1.96484 12.6634 2.33734 12.0004 3.00038L11.5004 3.50038M12.0004 8.00046C11.6745 7.66786 11.2855 7.40363 10.8563 7.22325C10.427 7.04286 9.96602 6.94995 9.50038 6.94995C9.03474 6.94995 8.57378 7.04286 8.1445 7.22325C7.71523 7.40363 7.32626 7.66786 7.00038 8.00046L3.00038 12.0005C2.33734 12.6635 1.96484 13.5628 1.96484 14.5005C1.96484 15.4381 2.33734 16.3374 3.00038 17.0005C3.66342 17.6635 4.5627 18.036 5.50038 18.036C6.43806 18.036 7.33734 17.6635 8.00038 17.0005L8.50038 16.5005" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}

@@ -1,22 +1,20 @@
-import Sidebar from '../../UI/Sidebar';
 import Container from 'components/UI/Container';
 import Content from './components/Content';
-import { articles, sidebarBtns } from './data';
-import cls from './Articles.module.scss'
+import { articles } from '../Articles/data';
+import cls from './Profile.module.scss'
 
-const Articles = () => {
+const Profile = () => {
     return (
         <div className={cls.page}>
             <Container>
-                <div className={cls.page__sidebar}>
-                    <Sidebar buttons={sidebarBtns} />
-                </div>
+                <div className={cls.page__leftaside}></div>
                 <div className={cls.page__content}>
                     <Content articles={articles} />
                 </div>
+                <div className={cls.page__rightaside}></div>
             </Container>
         </div>
     );
 }
 
-export default Articles;
+export default Profile;

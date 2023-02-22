@@ -17,49 +17,51 @@ const ArticleCard = ({
     id = ''
 }) => {
     return (
-        <Link href={`/articles/${id}`}>
-            <a className={cls.card}>
-                <div className={cls.card__content}>
-                    <div className={cls.card__content__hashtags}>
-                        {
-                            hashtags?.length > 0 && hashtags.map((tag, index) =>
-                                <RoundedButton key={index}>{tag}</RoundedButton>
-                            )
-                        }
-                    </div>
-                    <h2 className={cls.card__content__title}>{title}</h2>
-                    <div className={cls.card__content__info}>
-                        <div className={cls.card__content__profile}>
-                            <div className={cls.card__content__profile__ava}>
-                                <Image
-                                    src={avatar}
-                                    layout='fill'
-                                    objectFit='cover'
-                                    alt={fullName}
-                                />
-                            </div>
-                            <div className={cls.card__content__profile__info}>
-                                <h4>{fullName}</h4>
-                                <span>{job}</span>
-                            </div>
+        <div className={cls.card}>
+            <div className={cls.card__content}>
+                <div className={cls.card__content__hashtags}>
+                    {
+                        hashtags?.length > 0 && hashtags.map((tag, index) =>
+                            <RoundedButton key={index}>{tag}</RoundedButton>
+                        )
+                    }
+                </div>
+                <Link href={`/articles/${id}`}>
+                    <a>
+                        <h2 className={cls.card__content__title}>{title}</h2>
+                    </a>
+                </Link>
+                <div className={cls.card__content__info}>
+                    <div className={cls.card__content__profile}>
+                        <div className={cls.card__content__profile__ava}>
+                            <Image
+                                src={avatar}
+                                layout='fill'
+                                objectFit='cover'
+                                alt={fullName}
+                            />
                         </div>
-                        <div className={cls.card__content__info__data}>
-                            <span><LikeIcon /> {likes}</span>
-                            <span><CommentIcon /> {comments}</span>
-                            <span><CalendarIcon /> {date}</span>
+                        <div className={cls.card__content__profile__info}>
+                            <h4>{fullName}</h4>
+                            <span>{job}</span>
                         </div>
                     </div>
+                    <div className={cls.card__content__info__data}>
+                        <span><LikeIcon /> {likes}</span>
+                        <span><CommentIcon /> {comments}</span>
+                        <span><CalendarIcon /> {date}</span>
+                    </div>
                 </div>
-                <div className={cls.card__img}>
-                    <Image
-                        src={image}
-                        layout='fill'
-                        objectFit='cover'
-                        alt={title}
-                    />
-                </div>
-            </a>
-        </Link>
+            </div>
+            <div className={cls.card__img}>
+                <Image
+                    src={image}
+                    layout='fill'
+                    objectFit='cover'
+                    alt={title}
+                />
+            </div>
+        </div>
     );
 }
 

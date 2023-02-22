@@ -10,8 +10,13 @@ export const navLinks = [
     },
     {
         id: 1,
-        link: '/about-us',
+        link: '/services',
         label: 'О нас'
+    },
+    {
+        id: 6,
+        link: '/about-us',
+        label: 'Услуги'
     },
     {
         id: 2,

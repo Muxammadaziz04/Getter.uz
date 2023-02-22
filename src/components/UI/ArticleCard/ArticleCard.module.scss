@@ -29,6 +29,11 @@
             -webkit-line-clamp: 3;
                     line-clamp: 3; 
             -webkit-box-orient: vertical;
+            transition: all 0.3s;
+
+            &:hover{
+                color: rgba(112, 0, 255, 1);
+            }
         }
 
         &__info{

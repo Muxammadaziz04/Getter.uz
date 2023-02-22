@@ -1,10 +1,12 @@
-import React from 'react';
+import Contacts from "components/Pages/Contacts";
+import SEO from "components/SEO";
 
 const ContactsPage = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+          <SEO />
+          <Contacts />  
+        </>
     );
 }
 

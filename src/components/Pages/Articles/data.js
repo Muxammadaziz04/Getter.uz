@@ -77,7 +77,7 @@ export const sidebarBtns = [
     },
 ]
 
-export const artciles = [
+export const articles = [
     {
         id: 0,
         image: '/articles/5.png',

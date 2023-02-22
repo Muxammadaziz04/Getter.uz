@@ -71,13 +71,13 @@ const Header = () => {
             <div className={`${cls.header__btns} ${colorChanget ? cls.active__nav : ''}`}>
                 <div>
                     <Container>
-                        <Link href='/'>
+                        <Link href='/recomend-site'>
                             <a>
                                 <span><PlusIcon /></span>
                                 Рекомендовать сайт
                             </a>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/order'>
                             <a>
                                 <span><PlusIcon /></span>
                                 Заказать сайт

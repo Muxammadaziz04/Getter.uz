@@ -1,4 +1,5 @@
 import CircleButton from 'components/UI/Buttons/CircleButton';
+import Comment from 'components/UI/Comment';
 import { LargeCommentIcon, LargiLikeIcon, ShareIcon } from 'components/UI/icons';
 import Image from 'next/image';
 import Profile from '../Profile';
@@ -45,6 +46,22 @@ const Content = () => {
                         <li>Другой раздел веб-страницы</li>
                     </ul>
                     <p>Первая задача, над которой предстояло поработать, заключалась в том, чтобы придумать дизайн упаковки, сочетающий эмоциональность и функциональность и эффективно работающий как в материальной, так и в цифровой среде. Результатом творческих поисков стала яркая концепция, </p>
+                </div>
+                <div className={cls.content__input}>
+                    <Profile />
+                    <label>
+                        <input type="text" placeholder='Оставте свои комментари'/>
+                        <button>Отправить</button>
+                    </label>
+                </div>
+                <div className={cls.content__comments}>
+                    <span>Комментарии</span>
+                    <div className={cls.content__comments__list}>
+                        <Comment />
+                        <Comment />
+                        <Comment />
+                        <Comment />
+                    </div>
                 </div>
             </div>
         </div>

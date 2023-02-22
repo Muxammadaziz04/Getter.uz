@@ -4,12 +4,17 @@ import { useRouter } from "next/router";
 import { navLinks, footerLinks, contacts } from "./data";
 import cls from './Main.module.scss'
 
+const arr = [
+    '/',
+    '/profile'
+]
+
 const MainLayout = ({children}) => {
     const router = useRouter()
     
     return (
         <div className={cls.main}>
-            {router.pathname !== '/' && <Navbar links={navLinks} whiteMode={true}/>}
+            {!arr.includes(router.pathname) && <Navbar links={navLinks} whiteMode={true}/>}
             <div className={cls.main__content}>
                 {children}
             </div>

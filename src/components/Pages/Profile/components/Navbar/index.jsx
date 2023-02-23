@@ -2,6 +2,7 @@ import CircleButton from 'components/UI/Buttons/CircleButton';
 import Container from 'components/UI/Container';
 import { Logo, MessageIcon } from 'components/UI/icons';
 import Image from 'next/image';
+import Link from 'next/link';
 import cls from './Navbar.module.scss'
 
 const Navbar = () => {
@@ -9,11 +10,15 @@ const Navbar = () => {
         <div className={cls.navbar}>
             <Container>
                 <div className={cls.navbar__logo}>
-                    <Logo />
+                    <Link href='/'>
+                        <a>
+                            <Logo />
+                        </a>
+                    </Link>
                 </div>
                 <div className={cls.navbar__profile}>
                     <div className={cls.navbar__profile__img}>
-                        <Image 
+                        <Image
                             src='/avatars/abbos_janizakov.png'
                             layout='fill'
                             objectFit='cover'

@@ -1,0 +1,84 @@
+.content {
+    position: relative;
+    z-index: 10;
+    padding: 92px 76px;
+
+    & > div{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        &>h3 {
+            font-weight: 300;
+            font-size: 64px;
+            line-height: 87px;
+            color: white;
+        }
+
+        &>div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &>span {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 22px;
+                color: white;
+            }
+
+            & > button{
+                color: white;
+                opacity: 0.2;
+            }
+        }
+    }
+
+    &__form{
+        display: flex;
+        align-items: flex-start;
+        gap: 64px;
+        margin-bottom: 172px;
+
+        &__inputs{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            & > div:first-child, & > div:nth-child(2){
+                display: flex;
+                align-items: flex-start;
+                gap: 60px;
+            }
+
+            & > div > *{
+                width: 320px;
+            }
+        }
+    }
+
+    &__line{
+        display: flex;
+        align-items: center;
+        gap: 37px;
+
+        & > span{
+            font-size: 32px;
+            line-height: 89px;
+            color: white;
+        }
+
+        & > button{
+            transition: all 0.3s;
+           &:hover{
+            transform: translateX(50%);
+           }
+        }
+    }
+}

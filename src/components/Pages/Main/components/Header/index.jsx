@@ -83,7 +83,7 @@ const Header = () => {
                                 Заказать сайт
                             </a>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/create-article'>
                             <a>
                                 <span><PlusIcon /></span>
                                 Добавить статью

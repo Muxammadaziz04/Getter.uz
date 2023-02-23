@@ -1,54 +1,57 @@
-import { useRef, useState } from 'react';
-import { VisibilityOff, Visibility } from "@mui/icons-material"
-import SmallText from 'components/UI/Typography/SmallText';
-
+import { useState, useRef, useEffect } from 'react';
 import cls from './Input.module.scss'
 
 const Input = ({
     type = 'text',
-    label = '',
-    VisibilyIcon = <Visibility sx={{color: '#989898'}} />,
-    VisibilyOffIcon = <VisibilityOff sx={{color: '#989898'}} />,
-    withIcon = false,
-    name = '',
     placeholder = '',
-    register = {},
-    errors = {}
+    withData = false,
+    data = []
 }) => {
-    const inpRef = useRef()
-    const [inputType, setInputType] = useState(type)
+    const inputRef = useRef()
+    const [filteredData, setFilteredData] = useState(data)
+    const [isVisible, setIsVisible] = useState(false)
+    
+    useEffect(() => {
+        if(inputRef.current !== document.activeElement) return setIsVisible(false)
+        if(filteredData.length === 1 && filteredData[0] === inputRef.current.value) {
+            return setIsVisible(false)
+        } else if(filteredData.length > 0) {
+            return setIsVisible(true)
+        } else {
+            return setIsVisible(false)
+        }
+    }, [filteredData])
 
     return (
-        <span className={cls.input}>
-            <label className={cls.input__label}>
-                <SmallText color='black' fontWeight="500">{label}</SmallText>
-
-                <span style={{ position: 'relative' }}>
-                    <input
-                        style={{ paddingRight: withIcon ? '50px' : '15px' }}
-                        className={`${cls.input__field} ${errors[name] ? cls.input__field__error : ''}`}
-                        type={inputType}
-                        ref={inpRef}
-                        name={name}
-                        placeholder={placeholder}
-                        {...register}
-                    />
-
-                    {
-                        withIcon &&
-                        <span
-                            className={cls.input__icon}
-                            onClick={() => setInputType(prev => prev === 'text' ? 'password' : 'text')}
-                        >
-                            {inputType === 'password' ? VisibilyOffIcon : VisibilyIcon}
-                        </span>
+        <label className={cls.label}>
+            <input
+                className={cls.input}
+                type={type}
+                placeholder={placeholder}
+                ref={inputRef}
+                onChange={(e) => setFilteredData(data.filter(data => data?.toLowerCase().includes(e.target.value?.toLowerCase())))}
+                onFocus={(e) => {
+                    if(filteredData.length === 1 && filteredData[0] === e.target.value) {
+                        return setIsVisible(false)
+                    } else if(filteredData.length > 0) {
+                        return setIsVisible(true)
+                    } else {
+                        return setIsVisible(false)
                     }
-                </span>
-                {
-                    errors && errors[name] && <span className={cls.input__error}>{errors[name]?.message || 'Error'}</span>
-                }
-            </label>
-        </span>
+                }}
+                onBlur={() => setTimeout(() => setIsVisible(false), 200)}
+            />
+            {
+                withData && isVisible && filteredData?.length > 0 &&
+                <div>
+                    {
+                        filteredData?.length > 0 && filteredData.map(data =>
+                            <span onClick={() => {inputRef.current.value = data}}>{data}</span>
+                        )
+                    }
+                </div>
+            }
+        </label>
     );
 }
 

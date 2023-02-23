@@ -1,0 +1,34 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &>input {
+        font-size: 16px;
+        font-family: 'Inter';
+        line-height: 20px;
+        color: #0A0AFF;
+        padding: 8px 0;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #0A0AFF;
+        appearance: none;
+        -webkit-appearance: none;
+        &::placeholder{
+            color: #0A0AFF;
+        }
+
+        input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+    }
+
+    &__data{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+}

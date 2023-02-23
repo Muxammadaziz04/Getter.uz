@@ -1,4 +1,4 @@
-import { BlackPlusIcon, ListIcon, SaveIcon } from 'components/UI/icons';
+import { BlackPlusIcon, ExitIcon, ListIcon, SaveIcon } from 'components/UI/icons';
 import cls from './LeftAside.module.scss'
 
 const LeftAside = () => {
@@ -17,6 +17,9 @@ const LeftAside = () => {
                     <span><SaveIcon />Сoхраненные</span>
                 </li>
             </ul>
+            <button className={cls.aside__btn}>
+                <ExitIcon /> Выйти
+            </button>
         </div>
     );
 }

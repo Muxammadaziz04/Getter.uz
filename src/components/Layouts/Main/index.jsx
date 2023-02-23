@@ -6,7 +6,8 @@ import cls from './Main.module.scss'
 
 const arr = [
     '/',
-    '/profile'
+    '/profile',
+    '/create-article'
 ]
 
 const MainLayout = ({children}) => {

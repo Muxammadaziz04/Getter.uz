@@ -14,8 +14,8 @@ const Navbar = ({ links = [], whiteMode = false }) => {
 
     const func = () => {
         if (router.pathname === '/') setSize({ width: 0, height: 0, x: 0, y: 0 })
-        const el = document.getElementById(links.find(link => link.link === router.pathname)?.id)
-        setSize(getElementSize(el))
+        const el = document.getElementById(links.find(link => link.link === router.pathname)?.id || links[0]?.id)
+        setSize(el ? getElementSize(el) : { x: 0, y: 0 })
     }
 
     useEffect(() => {

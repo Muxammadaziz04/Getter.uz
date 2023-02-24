@@ -1,9 +1,10 @@
 import Container from 'components/UI/Container';
 import { FooterLogo } from 'components/UI/icons';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import cls from './Info.module.scss'
 
 const FooterInfo = ({ links = [] }) => {
+    const router = useRouter()
     return (
         <div className={cls.block}>
             <Container>
@@ -12,7 +13,7 @@ const FooterInfo = ({ links = [] }) => {
                     <li>Условия использования</li>
                     <li>Политика конфиденциальности</li>
                 </ul>
-                <div className={cls.developed}>
+                <div className={cls.developed} onClick={() => router.push('/')}>
                     Developed by: <span><FooterLogo /></span>
                 </div>
             </Container>

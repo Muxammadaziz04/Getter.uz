@@ -15,7 +15,7 @@ export const avatars = [
         id: 0,
         image: '/avatars/abdulloh.png',
         fullName: 'Abdulloh Xolmurodov',
-        job: 'Designer'
+        job: 'PM'
     },
     {
         id: 9,

@@ -1,3 +1,16 @@
+.cards__gr{
+    display: flex;
+    align-items: center;
+    row-gap: 30px;
+    margin: 71px 0;
+    flex-wrap: wrap;
+
+    & > * {
+        max-width: calc(100% / 4)!important;
+        width: 100%!important;
+    }
+}
+
 .btn_group{
     display: flex;
     align-items: center;

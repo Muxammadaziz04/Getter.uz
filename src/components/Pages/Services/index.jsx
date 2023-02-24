@@ -1,103 +1,33 @@
-import Image from "next/image"
 import Container from "components/UI/Container";
-import { LocationIcon, MailIcon, PhoneIcon, TelegramIcon } from "components/UI/icons"
+import { LocationIcon, MailIcon, PhoneIcon, TelegramIcon } from "components/UI/icons";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import Card from "./components/Card";
 
-const About = () => {
+
+const Services = () => {
+    const router = useRouter()
     return (
-        <Container>
-            <main className='about'>
-                <section className='about-hero'>
-                    <div className="container about-hero__container">
-                        <h2 className='about-hero__heading'>
-                            Создаем сайты и айдентику от всей
-
-                            <span className='about-it__heading-span'>
-                                души
-                            </span>
-                        </h2>
-                        <div style={{ width: '888px', height: '339px', position: 'relative' }}>
-                            <Image
-                                src={'/about-us.png'}
-                                layout='fill'
-                                objectFit="cover"
-                                alt=""
-                            />
-                        </div>
-
-                    </div>
-                </section>
-
-                <section className='about-desc'>
-                    <div className='container'>
-                        <div className='about-desc__wrapper'>
-                            <h3 className='about-desc__heading'>
-                                Главный Фокус компании это  разработка уникальных ИТ продуктов
-                            </h3>
-                            <p className='about-desc__text'>
-                                Артисты стараются нащупать связь между поколениями. Спектакль рассчитан на широкую аудиторию и будет интересен зрителям всех возрастов, поскольку он такой же разнообразный, как и детский опыт каждого человека.
-                            </p>
-                        </div>
-
-                        <div style={{ width: '100%', height: '770px', position: 'relative' }}>
-                            <Image
-                                src={'/about-us-banner.png'}
-                                layout='fill'
-                                objectFit="cover"
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                </section>
-
-                <section className='about-it'>
-                    <div className="container">
-                        <h3 className='about-it__heading'>
-                            Разработка
-                            <br />
-                            современных ИТ
-                            <span className='about-it__heading-span'>
-                                продуктов
-                            </span>
-                        </h3>
-                        <ul className='about-it__list'>
-                            <li className='about-it__item'>
-                                <h4 className='about-it__list-heading'>
-                                    Разработка ИТ продуктов
-                                </h4>
-                                <p className='about-it__list-desc'>
-                                    Web sites, mobila apps, CRM HRM ERP systems: ... Ux design, Ui design, WEb design, App design
-                                </p>
-                            </li>
-                            <li className='about-it__item'>
-                                <h4 className='about-it__list-heading'>
-                                    Категории веб сайтов
-                                </h4>
-                                <p className='about-it__list-desc'>
-                                    Интернет магазин, корпоротивные сайты, Каталог сайты, Портфолио
-                                </p>
-                            </li>
-                            <li className='about-it__item'>
-                                <h4 className='about-it__list-heading'>
-                                    Разработка Frontend
-                                </h4>
-                                <p className='about-it__list-desc'>
-                                    Js, Vue JS, React Js
-                                </p>
-                            </li>
-                            <li className='about-it__item'>
-                                <h4 className='about-it__list-heading'>
-                                    Разработка Backend
-                                </h4>
-                                <p className='about-it__list-desc'>
-                                    Java Cotlin, Phyton, Node.js
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
+        <div style={{ width: '100%', paddingTop: '60px' }}>
+            <Container>
+                <h2 className='about-hero__heading' style={{ maxWidth: '764px', width: '100%' }}>
+                    Виды услуг, которые мы
+                    <span className='about-it__heading-span'>
+                        предлагаем
+                    </span>
+                </h2>
                 <section className='about-call'>
                     <div className="container">
+                        <div className='cards__gr'>
+                            <Card />
+                            <Card />
+                            <Card />
+                            <Card />
+                            <Card />
+                            <Card />
+                            <Card />
+                            <Card />
+                        </div>
                         <div className="btn_group">
                             <div>
                                 <h3 className='about-call__heading'>
@@ -346,9 +276,9 @@ const About = () => {
                         </div>
                     </div>
                 </section>
-            </main>
-        </Container>
+            </Container>
+        </div>
     );
 }
 
-export default About;
+export default Services;

@@ -60,7 +60,7 @@ const Header = () => {
                                     )
                                 }
                             </div>
-                            <div>
+                            <div style={{paddingLeft: '50px'}}>
                                 <RightArrow />
                             </div>
                         </Container>

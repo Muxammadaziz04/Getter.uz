@@ -46,7 +46,7 @@ const Input = ({
                 <div>
                     {
                         filteredData?.length > 0 && filteredData.map(data =>
-                            <span onClick={() => {inputRef.current.value = data}}>{data}</span>
+                            <span onClick={() => {inputRef.current.value = data}} key={data}>{data}</span>
                         )
                     }
                 </div>

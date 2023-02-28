@@ -178,6 +178,7 @@
 
 .active__nav{
     background: white;
+    border-bottom: 1px solid rgba(86, 80, 80, 0.2);
     & > div:first-child{
         border-color: rgba(86, 80, 80, 0.2);
         & > div >a{
@@ -206,6 +207,17 @@
             &:hover{
                 opacity: 1;
             }
+        }
+    }
+}
+
+.active__link{
+    color: #7000FF!important;
+    opacity: 1!important;
+    & > span{
+        background: rgba(112, 0, 255, 0.1)!important;
+        & > svg > path {
+            fill: #7000FF!important;
         }
     }
 }

@@ -30,3 +30,12 @@
         }
     }
 }
+
+.file{
+    max-width: 420px;
+    width: 100%;
+    & > input{
+        width: 100%;
+        display: none;
+    }
+}

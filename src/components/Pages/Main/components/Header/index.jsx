@@ -30,7 +30,7 @@ const Header = () => {
             return () => window.removeEventListener('scroll', handleScroll)
         }
     }, []);
-
+    console.log(router);
     return (
         <>
             <div className={cls.wrapper}>
@@ -60,7 +60,7 @@ const Header = () => {
                                     )
                                 }
                             </div>
-                            <div style={{paddingLeft: '50px'}}>
+                            <div style={{ paddingLeft: '50px' }}>
                                 <RightArrow />
                             </div>
                         </Container>
@@ -72,19 +72,25 @@ const Header = () => {
                 <div>
                     <Container>
                         <Link href='/recomend-site'>
-                            <a>
+                            <a
+                                className={(query === undefined) && colorChanget ? cls.active__link : ''}
+                            >
                                 <span><PlusIcon /></span>
                                 Рекомендовать сайт
                             </a>
                         </Link>
-                        <Link href='/order'>
-                            <a>
+                        <Link href='/order-project'>
+                            <a
+                                className={(query === 'portfolio') && colorChanget ? cls.active__link : ''}
+                            >
                                 <span><PlusIcon /></span>
                                 Заказать сайт
                             </a>
                         </Link>
                         <Link href='/create-article'>
-                            <a>
+                            <a
+                                className={(query === 'articles') && colorChanget ? cls.active__link : ''}
+                            >
                                 <span><PlusIcon /></span>
                                 Добавить статью
                             </a>
@@ -94,8 +100,8 @@ const Header = () => {
                 <div>
                     <Container>
                         <button
-                            style={query === 'populated-sites' ? { opacity: 1 } : {}}
-                            onClick={() => router.push('', '?cards=populated-sites', { scroll: false })}
+                            style={query === undefined ? { opacity: 1 } : {}}
+                            onClick={() => router.push('', '?', { scroll: false })}
                         >
                             Популярные сайты
                         </button>

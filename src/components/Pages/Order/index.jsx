@@ -17,6 +17,7 @@ const Order = () => {
                             Icon={<HomeIcon />}
                         />
                         <DashedInput
+                            type='file'
                             placeholder='Загрузить бриф'
                             Icon={<UploadIcon />}
                         />

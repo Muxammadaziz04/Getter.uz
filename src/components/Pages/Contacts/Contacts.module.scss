@@ -62,6 +62,11 @@
                 font-weight: 700;
                 font-size: 22px;
                 line-height: 30px;
+                transition: all 0.3s;
+
+                &:hover{
+                    color: #7000ff;
+                }
             }
         }
     }
@@ -76,6 +81,26 @@
             align-items: center;
             gap: 25px;
 
+            & > a{
+                width: 38px;
+                height: 38px;
+                padding: 10px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 1/1;
+                background: #f5f5f5;
+                transition: all 0.3s;
+                
+                &:hover{
+                    background: #7000ff;
+
+                    & > svg > path{
+                        stroke: white;
+                    }
+                }
+            }
         }
     }
 

@@ -1,10 +1,12 @@
-import { useRef, useState } from "react"
-import cls from './DashedInput.module.scss'
+import ReactInputMask from "react-input-mask";
+import { useState, useRef } from "react";
+import cls from '../DashedInput/DashedInput.module.scss'
 
-const DashedInput = ({
+const DashedInputMask = ({
     type = 'text',
     placeholder = '',
-    Icon = ''
+    Icon = '',
+    mask = ''
 }) => {
     const [name, setName] = useState()
     const [solid, setSolid] = useState(false)
@@ -19,9 +21,8 @@ const DashedInput = ({
             setSolid(e.target.value.length > 0)
         }
     }
-
     return (
-        <label className={`${cls.label} ${type === 'file' ? cls.file : ''}`} style={{borderStyle: solid ? 'solid' : 'dashed'}}>
+        <label className={`${cls.label} ${type === 'file' ? cls.file : ''}`} style={{ borderStyle: solid ? 'solid' : 'dashed' }}>
             {
                 Icon ? (
                     <div>
@@ -29,10 +30,15 @@ const DashedInput = ({
                     </div>
                 ) : <></>
             }
-           {type === 'file' &&  <span>{name || placeholder}</span>}
-            <input type={type} placeholder={placeholder} onChange={handleChange} ref={ref} />
+            <span>{name}</span>
+            <ReactInputMask
+                className={cls.input}
+                placeholder={placeholder}
+                onChange={handleChange}
+                mask={mask}
+            />
         </label>
     );
 }
 
-export default DashedInput;
+export default DashedInputMask;

@@ -73,6 +73,7 @@ const Header = () => {
                     <Container>
                         <Link href='/recomend-site'>
                             <a
+                                style={(query === undefined) && !colorChanget ? { opacity: "1", color: 'white' } : {}}
                                 className={(query === undefined) && colorChanget ? cls.active__link : ''}
                             >
                                 <span><PlusIcon /></span>
@@ -81,6 +82,7 @@ const Header = () => {
                         </Link>
                         <Link href='/order-project'>
                             <a
+                                style={(query === 'portfolio') && !colorChanget ? { opacity: "1", color: 'white' } : {}}
                                 className={(query === 'portfolio') && colorChanget ? cls.active__link : ''}
                             >
                                 <span><PlusIcon /></span>
@@ -89,6 +91,7 @@ const Header = () => {
                         </Link>
                         <Link href='/create-article'>
                             <a
+                                style={(query === 'articles') && !colorChanget ? { opacity: "1", color: 'white' } : {}}
                                 className={(query === 'articles') && colorChanget ? cls.active__link : ''}
                             >
                                 <span><PlusIcon /></span>

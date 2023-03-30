@@ -2,11 +2,11 @@ import SingleArticle from "components/Pages/SingleArticle";
 import SEO from "components/SEO";
 
 
-const SingleArticlePage = () => {
+const SingleArticlePage = ({}) => {
     return (
         <>
             <SEO />
-            <SingleArticle />
+            <SingleArticle  />
         </>
     );
 }

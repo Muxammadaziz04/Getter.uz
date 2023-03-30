@@ -10,12 +10,14 @@ import Navbar from 'components/UI/Navbar';
 import { navLinks } from '../../../../Layouts/Main/data';
 import { avatars } from './data';
 import cls from './Header.module.scss'
+import { getCookie } from 'cookies-next';
 
 const Header = () => {
     const router = useRouter()
     const [colorChanget, setColorChanget] = useState(false)
-    const query = router?.asPath.split('?')?.[1]?.split('=')?.[1]
 
+    const query = router?.asPath.split('?')?.[1]?.split('=')?.[1]
+    const token = getCookie('access_token_user')
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const handleScroll = () => {
@@ -30,7 +32,11 @@ const Header = () => {
             return () => window.removeEventListener('scroll', handleScroll)
         }
     }, []);
-    console.log(router);
+
+
+
+
+
     return (
         <>
             <div className={cls.wrapper}>
@@ -89,15 +95,27 @@ const Header = () => {
                                 Заказать сайт
                             </a>
                         </Link>
-                        <Link href='/create-article'>
-                            <a
-                                style={(query === 'articles') && !colorChanget ? { opacity: "1", color: 'white' } : {}}
-                                className={(query === 'articles') && colorChanget ? cls.active__link : ''}
-                            >
-                                <span><PlusIcon /></span>
-                                Добавить статью
-                            </a>
-                        </Link>
+                        {
+                            token ?
+                                <Link href='/create-article'>
+                                    <a
+                                        style={(query === 'articles') && !colorChanget ? { opacity: "1", color: 'white' } : {}}
+                                        className={(query === 'articles') && colorChanget ? cls.active__link : ''}
+                                    >
+                                        <span><PlusIcon /></span>
+                                        Добавить статью
+                                    </a>
+                                </Link> :
+                                <Link href='/auth/register'>
+                                    <a
+                                        style={(query === 'articles') && !colorChanget ? { opacity: "1", color: 'white' } : {}}
+                                        className={(query === 'articles') && colorChanget ? cls.active__link : ''}
+                                    >
+                                        <span><PlusIcon /></span>
+                                        Добавить статью
+                                    </a>
+                                </Link>
+                        }
                     </Container>
                 </div>
                 <div>

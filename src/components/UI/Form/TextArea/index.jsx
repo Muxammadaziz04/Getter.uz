@@ -1,9 +1,9 @@
 import cls from './TextArea.module.scss'
 
-const TextArea = () => {
+const TextArea = ({ onChange }) => {
     return (
-        <textarea className={cls.area} cols={3}>
-            
+        <textarea className={cls.area} cols={3} onChange={onChange}>
+
         </textarea>
     );
 }

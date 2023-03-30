@@ -64,10 +64,11 @@ const config = {
 
 let replyEditor = "";
 
-const RichText = () => {
+const RichText = ({ onModelChange }) => {
     return (
         <FroalaEditor
             config={config}
+            onModelChange={onModelChange}
         />
     );
 }

@@ -1,13 +1,21 @@
 import axios from "axios";
-import { getUser } from "utils/userDetails";
-
-const { token } = getUser()
 
 const api = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_URL,
-    headers: {
-        Authorization: `Bareer ${token}`
-    }
+    baseURL: "http://185.74.5.188"
 })
 
-export default api
+const onResponse = (res) => {
+    return res
+}
+
+const onResponseError = (err) => {
+    const statusCode = err?.response?.status
+    if (statusCode === 401) {
+        axios.post('http://185.74.5.188/auth/refresh')
+    }
+    return Promise.resolve(err)
+}
+
+api.interceptors.response.use(onResponse, onResponseError)
+
+export default api;

@@ -1,0 +1,68 @@
+.nav {
+  width: 100%;
+  padding: 20px 0;
+  background: transparent;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo {
+  display: block;
+}
+.nav__logo svg {
+  fill: white;
+}
+.nav__group, .nav__btngroup {
+  display: flex;
+  align-items: center;
+}
+.nav__group {
+  gap: 30px;
+}
+.nav__btngroup {
+  gap: 10px;
+}
+.nav__btngroup a {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.nav__linkgroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+}
+.nav__linkgroup a {
+  color: white;
+}
+.nav svg, .nav circle, .nav path {
+  fill: white !important;
+}
+
+.whiteMode {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.7);
+}
+.whiteMode a {
+  color: #121212;
+}
+.whiteMode svg, .whiteMode circle, .whiteMode path {
+  fill: #121212 !important;
+}
+.whiteMode .nav__linkgroup, .whiteMode .nav__btngroup a {
+  border: 1px solid #CCCCCC;
+}
+
+.link__active {
+  border-radius: 84px;
+  background: rgba(204, 204, 204, 0.2);
+  position: absolute;
+  transition: all 0.3s;
+  z-index: -1;
+}/*# sourceMappingURL=Navbar.module.css.map */

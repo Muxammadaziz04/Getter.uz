@@ -6,7 +6,8 @@ const DashedInputMask = ({
     type = 'text',
     placeholder = '',
     Icon = '',
-    mask = ''
+    mask = '',
+    onChange
 }) => {
     const [name, setName] = useState()
     const [solid, setSolid] = useState(false)
@@ -34,7 +35,10 @@ const DashedInputMask = ({
             <ReactInputMask
                 className={cls.input}
                 placeholder={placeholder}
-                onChange={handleChange}
+                onChange={(e) => {
+                    handleChange(e),
+                        onChange(e)
+                }}
                 mask={mask}
             />
         </label>

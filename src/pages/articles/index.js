@@ -1,7 +1,7 @@
 import Articles from 'components/Pages/Articles';
 import SEO from 'components/SEO';
 
-const ArticlesPage = () => {
+const CategoryPage = () => {
     return (
         <>
             <SEO />
@@ -10,4 +10,4 @@ const ArticlesPage = () => {
     );
 }
 
-export default ArticlesPage;
+export default CategoryPage;

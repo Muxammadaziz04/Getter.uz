@@ -1,22 +1,28 @@
 import Image from 'next/image';
 import cls from './Profile.module.scss'
 
-const Profile = () => {
-    return (
-        <div className={cls.profile}>
-            <div className={cls.profile__img}>
-                <Image 
-                    src='/avatars/abbos_janizakov.png'
-                    layout='fill'
-                    objectFit='cover'
-                />
+const Profile = ({ data }) => {
+    if (data) {
+        return (
+            <div className={cls.profile}>
+                <div className={cls.profile__img}>
+                    <Image
+                        src={data?.avatar?.url}
+                        layout='fill'
+                        objectFit='cover'
+                    />
+                </div>
+                <div className={cls.profile__info}>
+                    <h4>{data?.name}</h4>
+                    <span>{data?.position?.title}</span>
+                </div>
             </div>
-            <div className={cls.profile__info}>
-                <h4>Anton Ptushkin</h4>
-                <span>Ux Ui designer</span>
-            </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <h1>loading</h1>
+        )
+    }
 }
 
 export default Profile;

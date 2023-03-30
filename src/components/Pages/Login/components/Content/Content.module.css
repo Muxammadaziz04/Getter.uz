@@ -1,0 +1,71 @@
+.content {
+  position: relative;
+  z-index: 10;
+  padding: 92px 76px;
+}
+.content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.content__title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.content__title > h3 {
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 87px;
+  color: white;
+}
+.content__title > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.content__title > div > span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+}
+.content__title > div > button {
+  color: white;
+  opacity: 0.2;
+}
+.content__form {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+  margin-bottom: 172px;
+}
+.content__form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.content__form__inputs > div:first-child, .content__form__inputs > div:nth-child(2) {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+.content__form__inputs > div > * {
+  width: 320px;
+}
+.content__line {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+.content__line > span {
+  font-size: 32px;
+  line-height: 89px;
+  color: white;
+}
+.content__line > button {
+  transition: all 0.3s;
+}
+.content__line > button:hover {
+  transform: translateX(50%);
+}/*# sourceMappingURL=Content.module.css.map */

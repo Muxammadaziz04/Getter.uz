@@ -1,0 +1,33 @@
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 25px;
+  background: #A044FA;
+  border-radius: 100px;
+}
+.label > input {
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.label > input::-moz-placeholder {
+  color: white;
+}
+.label > input:-ms-input-placeholder {
+  color: white;
+}
+.label > input::placeholder {
+  color: white;
+}
+.label > div {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=VioleteInput.module.css.map */

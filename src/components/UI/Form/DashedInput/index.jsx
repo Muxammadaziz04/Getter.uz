@@ -4,7 +4,8 @@ import cls from './DashedInput.module.scss'
 const DashedInput = ({
     type = 'text',
     placeholder = '',
-    Icon = ''
+    Icon = '',
+    onChange
 }) => {
     const [name, setName] = useState()
     const [solid, setSolid] = useState(false)
@@ -21,7 +22,7 @@ const DashedInput = ({
     }
 
     return (
-        <label className={`${cls.label} ${type === 'file' ? cls.file : ''}`} style={{borderStyle: solid ? 'solid' : 'dashed'}}>
+        <label className={`${cls.label} ${type === 'file' ? cls.file : ''}`} style={{ borderStyle: solid ? 'solid' : 'dashed' }}>
             {
                 Icon ? (
                     <div>
@@ -29,8 +30,11 @@ const DashedInput = ({
                     </div>
                 ) : <></>
             }
-           {type === 'file' &&  <span>{name || placeholder}</span>}
-            <input type={type} placeholder={placeholder} onChange={handleChange} ref={ref} />
+            {type === 'file' && <span>{name || placeholder}</span>}
+            <input type={type} placeholder={placeholder} onChange={(e) => {
+                handleChange(e)
+                onChange(e)
+            }} ref={ref} />
         </label>
     );
 }

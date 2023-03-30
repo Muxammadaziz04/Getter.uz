@@ -1,0 +1,29 @@
+.label {
+  display: block;
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.label > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.label > div > svg > path {
+  stroke: white;
+}
+.label > div > span {
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.4;
+}
+.label > input {
+  display: none;
+}/*# sourceMappingURL=PhotoUpload.module.css.map */

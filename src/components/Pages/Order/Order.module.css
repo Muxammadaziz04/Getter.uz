@@ -1,0 +1,55 @@
+.page {
+  width: 100%;
+}
+.page > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 100px 30px;
+}
+.page__title {
+  font-size: 44px;
+  line-height: 62px;
+}
+.page__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: #FAF9FB;
+  border-radius: 18px;
+  padding: 50px 30px;
+  max-width: 1238px;
+}
+.page__form > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.page__form > div:first-child > label:first-child {
+  flex-grow: 3;
+}
+.page__form > div:first-child > label:nth-child(2) {
+  flex-grow: 1;
+}
+.page__form > div:nth-child(2) > label {
+  flex-grow: 1;
+}
+.page__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.page__button > span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+.page__button > button {
+  border: 1px solid #121212;
+  border-radius: 100px;
+  font-size: 11px;
+  line-height: 14px;
+  color: #131313;
+}/*# sourceMappingURL=Order.module.css.map */

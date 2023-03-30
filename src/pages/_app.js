@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
 import MainLayout from 'components/Layouts/Main';
-import { store } from 'store';
+import { store } from '../store/index';
 import { Suspense } from 'react';
 
 import '../styles/globals.scss'

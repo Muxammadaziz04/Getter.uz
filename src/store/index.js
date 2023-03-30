@@ -1,10 +1,9 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { alertReducers } from "./Alert";
 
-const rootReducer = combineReducers({
-    alert: alertReducers
-})
+import articlesReducer from "./Articles/articles.slice";
 
 export const store = configureStore({
-    reducer: rootReducer
+    reducer: {
+        article:articlesReducer,
+    }
 })

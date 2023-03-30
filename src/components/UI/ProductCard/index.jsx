@@ -23,10 +23,10 @@ const ProductCard = ({ image, title, desc, link = '', likes }) => {
                                 fill={addedLike ? 'white' : ''}
                             />
                         </div>
-                        <a 
-                            href={link} 
-                            target='_blank' 
-                            rel="noreferrer" 
+                        <a
+                            href={link}
+                            target='_blank'
+                            rel="noreferrer"
                             className={cls.hover_el__btn}
                         ><NextArrowIcon /></a>
                     </div>

@@ -1,0 +1,67 @@
+.ava {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+}
+.ava > span {
+  width: 102% !important;
+  height: 102% !important;
+  transform: translate(-1%, -1%) !important;
+}
+
+.ava:hover > .tooltip {
+  display: flex;
+}
+
+.tooltip {
+  display: none;
+  width: auto !important;
+  padding: 10px 40px 10px 15px !important;
+  border-radius: 14px;
+  background: white;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  transform: translateY(140%);
+}
+.tooltip > h3 {
+  white-space: nowrap;
+  width: 100%;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+}
+.tooltip > span {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 15px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.tooltip::after {
+  content: "";
+  width: 45px;
+  height: 18px;
+  position: absolute;
+  background: url("/tooltip.svg");
+  top: 1px;
+  left: 20px;
+  transform: translateY(-100%);
+}
+.tooltip__top {
+  top: 0;
+  left: 0;
+  transform: translateY(-140%);
+}
+.tooltip__top::after {
+  top: auto;
+  bottom: 1px;
+  transform: translateY(100%) rotateX(180deg);
+}/*# sourceMappingURL=Avatar.module.css.map */

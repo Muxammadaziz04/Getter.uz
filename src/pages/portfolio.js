@@ -1,10 +1,14 @@
+import Portfolio from 'components/Pages/Portfolio';
+import SEO from 'components/SEO';
 import React from 'react';
 
 const PortfolioPage = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <SEO />
+       
+             <Portfolio/>  
+        </>
     );
 }
 

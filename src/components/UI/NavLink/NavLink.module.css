@@ -1,0 +1,32 @@
+.link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  font-family: "Inter";
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  border-radius: 50px;
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.border {
+  border: 1px solid rgba(18, 18, 18, 0.2);
+}
+
+.white {
+  background: rgba(204, 204, 204, 0.2) !important;
+}
+
+.menu {
+  background: white !important;
+  color: #7000FF !important;
+}
+.menu > svg > circle {
+  fill: #7000FF !important;
+}/*# sourceMappingURL=NavLink.module.css.map */

@@ -3,7 +3,8 @@ import cls from './VioleteInput.module.scss'
 const VioleteInput = ({
     type = 'text',
     placeholder = '',
-    Icon = ''
+    Icon = '',
+    onChange
 }) => {
     return (
         <label className={cls.label}>
@@ -17,6 +18,7 @@ const VioleteInput = ({
             <input
                 type={type}
                 placeholder={placeholder}
+                onChange={onChange}
             />
         </label>
     );

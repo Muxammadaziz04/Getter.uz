@@ -1,0 +1,10 @@
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  background: var(--dark-green);
+  border-radius: 6px;
+  border: none;
+}
+.btn:disabled {
+  opacity: 0.5;
+}/*# sourceMappingURL=Button.module.css.map */

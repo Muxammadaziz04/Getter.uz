@@ -5,6 +5,9 @@ const nextConfig = {
   swcMinify: true,
   env: {
     COOKIE_TIME: 30 * 24 * 60 * 60,
+  },
+  images: {
+    domains:["localhost"]
   }
 }
 

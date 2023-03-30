@@ -1,0 +1,51 @@
+.input {
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  line-height: 22px;
+}
+.input:focus {
+  border-color: white;
+}
+.input::-moz-placeholder {
+  opacity: 0.6;
+}
+.input:-ms-input-placeholder {
+  opacity: 0.6;
+}
+.input::placeholder {
+  opacity: 0.6;
+}
+
+.label {
+  position: relative;
+}
+.label > div {
+  max-width: 320px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  background: rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  border-radius: 5px;
+  z-index: 10;
+}
+.label > div > span {
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  cursor: pointer;
+}/*# sourceMappingURL=Input.module.css.map */

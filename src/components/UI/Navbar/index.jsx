@@ -7,10 +7,13 @@ import { Logo } from '../icons';
 import getElementSize from 'utils/getElementSize';
 import cls from './Navbar.module.scss'
 import TestButton from '../Buttons/TestButton';
+import { getCookie } from 'cookies-next';
 
 const Navbar = ({ links = [], whiteMode = false }) => {
     const [size, setSize] = useState({ width: 0, height: 0, x: 0, y: 0 })
     const router = useRouter()
+    const token = getCookie('access_token_user')
+
 
     const func = () => {
         if (router.pathname === '/') setSize({ width: 0, height: 0, x: 0, y: 0 })
@@ -25,7 +28,7 @@ const Navbar = ({ links = [], whiteMode = false }) => {
     return (
         <nav className={`${cls.nav} ${whiteMode ? cls.whiteMode : ''}`}>
             <Container className={cls.nav__container}>
-                <div style={{display: 'flex', gap: "20px"}}>
+                <div style={{ display: 'flex', gap: "20px" }}>
                     <div className={cls.nav__group}>
                         <Link href='/'>
                             <a className={cls.nav__logo}>
@@ -63,9 +66,10 @@ const Navbar = ({ links = [], whiteMode = false }) => {
                     </div>
                     <TestButton />
                 </div>
+
                 <div className={cls.nav__btngroup}>
                     <NavLink href='/order-project' withBorder>Заказать проект</NavLink>
-                    <NavLink href='/profile' withBorder>Профиль</NavLink>
+                    <NavLink href={token ? '/profile' : '/auth/register'} withBorder>{false ? "Войти" : "Профиль"}</NavLink>
                 </div>
             </Container>
         </nav>

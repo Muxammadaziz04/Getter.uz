@@ -1,8 +1,8 @@
 import cls from './BlackBorderButton.module.scss'
 
-const BlackBorderButton = ({children, ...other}) => {
+const BlackBorderButton = ({ onClick, children, ...other }) => {
     return (
-        <button className={cls.btn} {...other}>
+        <button className={cls.btn} {...other} onClick={onClick}>
             {children}
         </button>
     );

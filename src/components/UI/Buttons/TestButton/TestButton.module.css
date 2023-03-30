@@ -1,0 +1,47 @@
+.btn {
+  background: #7000FF;
+  border-radius: 1000px;
+  padding: 10px 17px 10px 31px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  position: relative;
+}
+.btn::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FFE609;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  -webkit-animation: test 1s ease-in infinite;
+          animation: test 1s ease-in infinite;
+}
+
+@-webkit-keyframes test {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes test {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=TestButton.module.css.map */

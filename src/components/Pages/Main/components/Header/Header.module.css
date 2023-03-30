@@ -1,0 +1,189 @@
+.header {
+  width: 100%;
+  height: calc(100vh - 82px);
+  position: relative;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+.header__title {
+  margin: 60px 0;
+  position: relative;
+  z-index: 9;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 68px;
+  color: white;
+  max-width: 764px;
+}
+.header__title > span {
+  font-family: "Times";
+  font-style: italic;
+}
+.header__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url("/line.svg");
+  width: 263px;
+  height: 32px;
+  transform: translateY(calc(100% + 10px)) translateX(20%);
+}
+.header__rowblock {
+  margin: 30px 0;
+  position: relative;
+  z-index: 100;
+}
+.header__rowblock > div {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+.header__rowblock > div > div:nth-child(3) {
+  transform: translateX(-200%);
+  transition: transform 0.5s ease, top 0.5s ease;
+  cursor: pointer;
+}
+.header__rowblock > div > div:nth-child(3):hover {
+  transform: translateX(-170%);
+}
+.header__rowblock__text {
+  font-size: 32px;
+  line-height: 89px;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+.header__rowblock__avatars {
+  display: flex;
+  align-items: center;
+}
+.header__ava {
+  transition: all 0.3s;
+}
+.header__ava:hover {
+  z-index: 1000;
+}
+.header__btns {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  margin-top: auto;
+  width: 100%;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+}
+.header__btns.fixed {
+  background: #000;
+}
+.header__btns > div:first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+.header__btns > div:first-child > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header__btns > div:first-child > div > a {
+  display: block;
+  font-size: 11px;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  gap: 6px;
+}
+.header__btns > div:first-child > div > a > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.header__btns > div:first-child > div > a:hover {
+  color: white;
+}
+.header__btns > div:first-child > div > a:first-child {
+  margin-right: 134px;
+}
+.header__btns > div:first-child > div > a:nth-child(2) {
+  margin-right: 153px;
+}
+.header__btns > div:nth-child(2) > div {
+  display: flex;
+  align-items: center;
+}
+.header__btns > div:nth-child(2) > div button {
+  padding: 11px 80px 11px 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.header__btns > div:nth-child(2) > div button:last-child {
+  border-right: none;
+}
+.header__btns > div:nth-child(2) > div button:first-child {
+  padding-left: 0;
+}
+.header__btns > div:nth-child(2) > div button:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+}
+
+.active__nav {
+  background: white;
+  border-bottom: 1px solid rgba(86, 80, 80, 0.2);
+}
+.active__nav > div:first-child {
+  border-color: rgba(86, 80, 80, 0.2);
+}
+.active__nav > div:first-child > div > a {
+  color: var(--black-color);
+  opacity: 0.5;
+}
+.active__nav > div:first-child > div > a:hover {
+  color: var(--black-color);
+  opacity: 1;
+}
+.active__nav > div:first-child > div > a > span {
+  background: rgba(18, 18, 18, 0.1);
+  opacity: 1;
+}
+.active__nav > div:first-child > div > a > span > svg > path {
+  fill: var(--black-color);
+}
+.active__nav > div:nth-child(2) > div > button {
+  transition: all 0.3s;
+  border-right: 1px solid rgba(86, 80, 80, 0.2);
+  color: var(--black-color);
+}
+.active__nav > div:nth-child(2) > div > button:hover {
+  opacity: 1;
+}
+
+.active__link {
+  color: #7000FF !important;
+  opacity: 1 !important;
+}
+.active__link > span {
+  background: rgba(112, 0, 255, 0.1) !important;
+}
+.active__link > span > svg > path {
+  fill: #7000FF !important;
+}/*# sourceMappingURL=Header.module.css.map */

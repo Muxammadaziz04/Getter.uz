@@ -1,0 +1,29 @@
+.block {
+  background: var(--black-color);
+  padding: 15px 0;
+}
+.block > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+.links > li {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: #FFFFFF;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.developed {
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 0.4);
+}/*# sourceMappingURL=Info.module.css.map */

@@ -95,7 +95,7 @@ const Content = () => {
                         {category ? <select className={cls.content__form__inputselect} name="id" id="cars" onChange={(e) => setCategoryId(e.target.value)}>
                             <option selected disabled value={categoriesId}>Выберите категории</option>
                             {category?.map((e) => (
-                                <option value={e?.id} >{e?.title}</option>
+                                <option key={e?.id} value={e?.id} >{e?.title}</option>
                             ))}
                         </select> : ""}
 
@@ -126,8 +126,8 @@ const Content = () => {
                 <div className={cls.content__form__img}>
                     <label>
                         <input style={{ "display": "none" }} type={"file"} onChange={hendleimg} accept='image/*' />
-                        <img src={imgFile ? URL.createObjectURL(imgFile) : ""} alt="" width={254} height={179} />
-                        <img src={""} alt="" width={60} />
+                        <Image src={imgFile ? URL.createObjectURL(imgFile) : ""} alt="" width={254} height={179} />
+                        <Image src={""} alt="" width={60} />
                     </label>
                 </div>
             </div>

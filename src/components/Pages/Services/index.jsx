@@ -42,6 +42,7 @@ const Services = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
@@ -72,6 +73,7 @@ const Services = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
@@ -102,6 +104,7 @@ const Services = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
@@ -132,6 +135,7 @@ const Services = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
@@ -162,6 +166,7 @@ const Services = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     {/* <img src={callProfile} alt="" /> */}

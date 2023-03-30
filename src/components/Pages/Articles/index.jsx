@@ -12,7 +12,7 @@ const Articles = () => {
     const [category, setCategory] = useState([])
     const router = useRouter()
     const { id } = router.query
-    console.log(id)
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -28,16 +28,16 @@ const Articles = () => {
 
 
     }, []);
-    if (id) {
-        useEffect(() => {
-            const ferchCategoryArticlu = async () => {
-                const data = await GetArticlesbycategoryId(id);
-                console.log(data)
-                setData(data)
-            };
-            ferchCategoryArticlu()
-        }, [id]);
-    }
+    // if (id) {
+    useEffect(() => {
+        const ferchCategoryArticlu = async () => {
+            const data = await GetArticlesbycategoryId(id);
+            console.log(data)
+            setData(data)
+        };
+        ferchCategoryArticlu()
+    }, [id]);
+    // }
 
 
     return (

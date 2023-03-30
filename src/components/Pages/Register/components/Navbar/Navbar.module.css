@@ -1,9 +1,0 @@
-.nav {
-  position: relative;
-  z-index: 10;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.nav > div > a > svg > path {
-  fill: white;
-}/*# sourceMappingURL=Navbar.module.css.map */

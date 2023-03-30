@@ -35,6 +35,7 @@ const Content = () => {
                     <div>
                         <span>Нет аккаунта?</span>
                         <RoundedButton>Зарегистрироваться</RoundedButton>
+
                     </div>
                 </div>
                 <div className={cls.content__form}>

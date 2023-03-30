@@ -15,6 +15,7 @@ const Comment = ({ data }) => {
                                 src={e?.user?.avatar?.url}
                                 layout='fill'
                                 objectFit='cover'
+                                alt='img'
                             />
                         </div>
                         <div className={cls.comment__content}>

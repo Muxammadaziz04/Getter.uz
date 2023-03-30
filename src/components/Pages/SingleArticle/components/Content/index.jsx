@@ -38,7 +38,7 @@ const Content = () => {
             await GetMeUser()
         })()
 
-    }, [router]);
+    }, [id]);
 
 
     const addComments = async (data) => {
@@ -84,6 +84,7 @@ const Content = () => {
                             src={datas?.avatar?.url}
                             layout='fill'
                             objectFit='cover'
+                            alt="img"
                         />
                     </div>
                     <div className={cls.content__text}>

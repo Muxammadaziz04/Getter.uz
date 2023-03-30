@@ -24,6 +24,7 @@ const Navbar = ({ user }) => {
                                 src={user?.avatar?.url}
                                 layout='fill'
                                 objectFit='cover'
+                                alt='img'
                             />
                         </div>
                         <div className={cls.navbar__profile__info}>

@@ -46,7 +46,7 @@ const Input = ({
                         }
                     })
                     setElem(e.target.value)
-                    onChange(elem, positionId)
+                    onChange(e, positionId)
                 }}
                 onFocus={(e) => {
                     if (filteredData.length === 1 && filteredData[0].title === e.target.value) {

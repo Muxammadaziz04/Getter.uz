@@ -10,6 +10,7 @@ const Profile = ({ data }) => {
                         src={data?.avatar?.url}
                         layout='fill'
                         objectFit='cover'
+                        alt="img"
                     />
                 </div>
                 <div className={cls.profile__info}>

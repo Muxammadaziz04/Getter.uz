@@ -22,7 +22,7 @@ const Aside = () => {
                 console.log(err);
             })
 
-    }, [router]);
+    }, [id]);
     return (
         <div className={cls.aside}>
             <Profile data={datas?.user} />

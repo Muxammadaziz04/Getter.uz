@@ -20,7 +20,7 @@ const About = () => {
                                 src={'/about-us.png'}
                                 layout='fill'
                                 objectFit="cover"
-                                alt=""
+                                alt="img"
                             />
                         </div>
 
@@ -43,7 +43,7 @@ const About = () => {
                                 src={'/about-us-banner.png'}
                                 layout='fill'
                                 objectFit="cover"
-                                alt=""
+                                alt="img"
                             />
                         </div>
                     </div>
@@ -112,6 +112,7 @@ const About = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
@@ -142,6 +143,7 @@ const About = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
@@ -172,6 +174,7 @@ const About = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
@@ -202,6 +205,7 @@ const About = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     <span className='about-call__hover-profile ' style={{ marginLeft: '6px' }}>
@@ -232,6 +236,7 @@ const About = () => {
                                                             src='/avatars/shaxriyor_oripov.png'
                                                             layout="fill"
                                                             objectFit="cover"
+                                                            alt="img"
                                                         />
                                                     </div>
                                                     {/* <img src={callProfile} alt="" /> */}

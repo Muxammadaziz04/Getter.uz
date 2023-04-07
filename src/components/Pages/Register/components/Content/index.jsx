@@ -23,7 +23,7 @@ const Content = () => {
     const [file, setFile] = useState()
     const [dataPositon, setDataPositon] = useState([])
     const [phone, setPhone] = useState()
-    const [positionInput, setPositioninput] = useState()
+    // const [positionInput, setPositioninput] = useState()
     const handelRegistor = async () => {
         const formData = new FormData()
         formData.append("name", name)
@@ -34,7 +34,7 @@ const Content = () => {
         formData.append("file", file)
         formData.append("phone", phone)
         const res = await RegisterUser(formData)
-
+        console.log(res)
         if (res.status == 201) {
             alert("resitor seccesfull, Please canfig email")
             router.push('/auth/login')
@@ -72,12 +72,12 @@ const Content = () => {
                     </div>
                 </div>
                 <div className={cls.content__form}>
-                    <PhotoUpload onChange={hendleimg} />
-
+                    <PhotoUpload onChange={hendleimg} img={file} />
+                    {/* <img src={file ? URL.createObjectURL(file) : '/'} alt="" /> */}
                     <div className={cls.content__form__inputs}>
                         <div>
                             <Input placeholder='ФИО' onChange={(e) => setName(e.target.value)} />
-                            <Input placeholder='' withData={true} onChange={(elem, positionId) => {
+                            <Input placeholder='' withData={true} onChange={(e, positionId) => {
                                 setPosition(positionId)
                             }} data={dataPositon} />
                         </div>

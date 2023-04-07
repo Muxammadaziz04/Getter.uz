@@ -17,7 +17,7 @@ const Header = () => {
     const [colorChanget, setColorChanget] = useState(false)
 
     const query = router?.asPath.split('?')?.[1]?.split('=')?.[1]
-    const token = getCookie('access_token_user')
+    const token = getCookie('accessToken')
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const handleScroll = () => {
@@ -32,10 +32,6 @@ const Header = () => {
             return () => window.removeEventListener('scroll', handleScroll)
         }
     }, []);
-
-
-
-
 
     return (
         <>

@@ -28,16 +28,16 @@ const Articles = () => {
 
 
     }, []);
-    // if (id) {
     useEffect(() => {
-        const ferchCategoryArticlu = async () => {
-            const data = await GetArticlesbycategoryId(id);
-            console.log(data)
-            setData(data)
-        };
-        ferchCategoryArticlu()
+        if (id) {
+            const ferchCategoryArticlu = async () => {
+                const data = await GetArticlesbycategoryId(id);
+                console.log(data)
+                setData(data)
+            };
+            ferchCategoryArticlu()
+        }
     }, [id]);
-    // }
 
 
     return (

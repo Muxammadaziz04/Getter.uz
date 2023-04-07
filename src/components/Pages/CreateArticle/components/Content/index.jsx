@@ -29,6 +29,7 @@ const Content = () => {
 
     const router = useRouter()
     const hendleArticli = async () => {
+
         const formData = new FormData()
         formData.append("file", imgFile)
         formData.append("title", title)
@@ -126,8 +127,8 @@ const Content = () => {
                 <div className={cls.content__form__img}>
                     <label>
                         <input style={{ "display": "none" }} type={"file"} onChange={hendleimg} accept='image/*' />
-                        <Image src={imgFile ? URL.createObjectURL(imgFile) : ""} alt="" width={254} height={179} />
-                        <Image src={""} alt="" width={60} />
+                        <Image src={imgFile ? URL.createObjectURL(imgFile) : '/icon.svg'} alt="" width={254} height={179} />
+                        {/* <Image src={""} alt="" width={60} /> */}
                     </label>
                 </div>
             </div>

@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { loginUser } from 'services/register';
 import cls from './Content.module.scss'
-
+import { getCookie, setCookie } from 'cookies-next';
 const Content = () => {
     const { register, handleSubmit, control, formState: { errors } } = useForm();
     const router = useRouter();
@@ -17,10 +17,11 @@ const Content = () => {
     const [email, setEmail] = useState()
 
     const handelRegistor = async () => {
-
         const res = await loginUser({ password: password, email: email })
-
         if (res.status == 200) {
+            setCookie("accessToken", res.data.accessToken)
+            setCookie("user_id", res.data.userId)
+            setCookie("refreshToken", res.data.refreshToken)
             alert("login seccesfull")
             router.push('/')
         } else {

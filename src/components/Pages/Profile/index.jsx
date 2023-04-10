@@ -22,8 +22,10 @@ const Profile = () => {
 
     }, []);
 
+
     return (
         <div style={{ width: '100%' }}>
+
             <Navbar user={data} />
             <div className={cls.page}>
                 <Container>

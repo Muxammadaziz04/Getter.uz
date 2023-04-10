@@ -17,16 +17,18 @@ const Content = () => {
     const [email, setEmail] = useState()
 
     const handelRegistor = async () => {
+
         const res = await loginUser({ password: password, email: email })
-        if (res.status == 200) {
-            setCookie("accessToken", res.data.accessToken)
-            setCookie("user_id", res.data.userId)
-            setCookie("refreshToken", res.data.refreshToken)
-            alert("login seccesfull")
-            router.push('/')
-        } else {
-            alert('failed')
-        }
+        console.log(res)
+        // if (res.status == 200) {
+        //     setCookie("accessToken", res.data.accessToken)
+        //     setCookie("user_id", res.data.userId)
+        //     setCookie("refreshToken", res.data.refreshToken)
+        //     alert("login seccesfull")
+        //     router.push('/')
+        // } else {
+        //     alert('failed')
+        // }
     };
     return (
         <div className={cls.content}>

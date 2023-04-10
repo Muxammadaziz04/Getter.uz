@@ -54,12 +54,12 @@ const Content = () => {
 
     }, []);
 
-
     const hendleimg = (e) => {
         if (e.target.files[0]) {
             setFile(e.target.files[0])
         }
     }
+    const [Inputvalue, setInputValue] = useState()
 
     return (
         <div className={cls.content}>
@@ -77,7 +77,8 @@ const Content = () => {
                     <div className={cls.content__form__inputs}>
                         <div>
                             <Input placeholder='ФИО' onChange={(e) => setName(e.target.value)} />
-                            <Input placeholder='' withData={true} onChange={(e, positionId) => {
+                            <Input placeholder='' value={Inputvalue} withData={true} inputValue={(e) => setInputValue(e)} onChange={(e, positionId) => {
+                                setInputValue(e.target.value)
                                 setPosition(positionId)
                             }} data={dataPositon} />
                         </div>

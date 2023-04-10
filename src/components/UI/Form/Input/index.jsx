@@ -7,13 +7,14 @@ const Input = ({
     withData = false,
     data = [],
     onChange,
-    value = ''
+    value = '',
+    inputValue
 }) => {
     const inputRef = useRef()
     const [filteredData, setFilteredData] = useState(data)
     const [isVisible, setIsVisible] = useState(false)
     const [positionId, setPositionId] = useState()
-    const [elem, setElem] = useState()
+
     useEffect(() => {
         if (inputRef.current !== document.activeElement) return setIsVisible(false)
         if (filteredData.length === 1 && filteredData[0].title === inputRef.current.value) {
@@ -25,9 +26,6 @@ const Input = ({
         }
     }, [filteredData])
 
-    const asddd = () => {
-        console.log("sadsad");
-    }
 
     return (
         <label className={cls.label} >
@@ -45,7 +43,7 @@ const Input = ({
                             setPositionId(data?.id)
                         }
                     })
-                    setElem(e.target.value)
+
                     onChange(e, positionId)
                 }}
                 onFocus={(e) => {
@@ -57,7 +55,7 @@ const Input = ({
                         return setIsVisible(false)
                     }
                 }}
-                onBlur={() => setTimeout(() => setIsVisible(false), 200)}
+                onBlur={() => setTimeout(() => setIsVisible(false), 500)}
             />
             {
                 withData && isVisible && filteredData?.length > 0 &&
@@ -65,7 +63,7 @@ const Input = ({
                     {
                         filteredData?.length > 0 && filteredData.map(data =>
                             <span
-                                onClick={asddd}
+                                onClick={() => inputValue(data?.title)}
                                 key={data?.title}
 
                             >{data?.title}</span>

@@ -33,8 +33,8 @@ const Content = () => {
         formData.append("position", position)
         formData.append("file", file)
         formData.append("phone", phone)
+
         const res = await RegisterUser(formData)
-        console.log(res)
         if (res.status == 201) {
             alert("resitor seccesfull, Please canfig email")
             router.push('/auth/login')
@@ -73,7 +73,7 @@ const Content = () => {
                 </div>
                 <div className={cls.content__form}>
                     <PhotoUpload onChange={hendleimg} img={file} />
-                    {/* <img src={file ? URL.createObjectURL(file) : '/'} alt="" /> */}
+
                     <div className={cls.content__form__inputs}>
                         <div>
                             <Input placeholder='ФИО' onChange={(e) => setName(e.target.value)} />

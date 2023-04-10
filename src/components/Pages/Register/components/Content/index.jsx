@@ -23,13 +23,16 @@ const Content = () => {
     const [file, setFile] = useState()
     const [dataPositon, setDataPositon] = useState([])
     const [phone, setPhone] = useState()
-    // const [positionInput, setPositioninput] = useState()
+    const [Inputvalue, setInputValue] = useState()
+
+
+
     const handelRegistor = async () => {
         const formData = new FormData()
         formData.append("name", name)
         formData.append("password", password)
         formData.append("email", email)
-        formData.append("description", "hello")
+        formData.append("description", "null")
         formData.append("position", position)
         formData.append("file", file)
         formData.append("phone", phone)
@@ -42,6 +45,7 @@ const Content = () => {
             alert('failed')
         }
     };
+
     useEffect(() => {
         const fetchData = async () => {
             const data = await GetPosition();
@@ -59,7 +63,7 @@ const Content = () => {
             setFile(e.target.files[0])
         }
     }
-    const [Inputvalue, setInputValue] = useState()
+
 
     return (
         <div className={cls.content}>
@@ -77,7 +81,11 @@ const Content = () => {
                     <div className={cls.content__form__inputs}>
                         <div>
                             <Input placeholder='ФИО' onChange={(e) => setName(e.target.value)} />
-                            <Input placeholder='' value={Inputvalue} withData={true} inputValue={(e) => setInputValue(e)} onChange={(e, positionId) => {
+                            <Input placeholder='Должность' withData={true} value={Inputvalue} onClick={(title, id) => {
+                                setInputValue(title)
+                                setPosition(id)
+
+                            }} onChange={(e, positionId) => {
                                 setInputValue(e.target.value)
                                 setPosition(positionId)
                             }} data={dataPositon} />

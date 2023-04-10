@@ -8,12 +8,14 @@ const Input = ({
     data = [],
     onChange,
     value = '',
-    inputValue
+    onClick,
+
 }) => {
     const inputRef = useRef()
     const [filteredData, setFilteredData] = useState(data)
     const [isVisible, setIsVisible] = useState(false)
-    const [positionId, setPositionId] = useState()
+    // const [positionId, setPositionId] = useState()
+    // const [inputvalue, SetInputvalue] = useState()
 
     useEffect(() => {
         if (inputRef.current !== document.activeElement) return setIsVisible(false)
@@ -34,17 +36,16 @@ const Input = ({
                 type={type}
                 placeholder={placeholder}
                 ref={inputRef}
-
+                {...{ [value && 'value']: value }}
                 onChange={(e) => {
                     setFilteredData(data?.filter(data => data?.title?.toLowerCase().includes(e.target.value?.toLowerCase()))
                     )
                     data.map(data => {
                         if (data?.title?.toLowerCase().includes(e.target.value?.toLowerCase())) {
-                            setPositionId(data?.id)
+                            onChange(e, data?.id)
                         }
                     })
-
-                    onChange(e, positionId)
+                    onChange(e)
                 }}
                 onFocus={(e) => {
                     if (filteredData.length === 1 && filteredData[0].title === e.target.value) {
@@ -63,8 +64,8 @@ const Input = ({
                     {
                         filteredData?.length > 0 && filteredData.map(data =>
                             <span
-                                onClick={() => inputValue(data?.title)}
-                                key={data?.title}
+                                onClick={() => onClick(data?.title, data?.id)}
+                                key={data?.id}
 
                             >{data?.title}</span>
                         )

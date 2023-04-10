@@ -43,6 +43,7 @@ const Content = () => {
         formData.append("user", cooks)
 
         setloading(true)
+
         await createArticles(formData)
             .then((response) => {
                 if (response.status == 200 || response.status == 201) {
@@ -55,7 +56,7 @@ const Content = () => {
                 }
                 if (response?.response) {
                     if (response.response.status == 401) {
-                        removeCookie('access_token_user')
+                        removeCookie('accessToken')
                     }
                 }
             })

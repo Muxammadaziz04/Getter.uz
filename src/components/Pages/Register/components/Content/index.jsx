@@ -11,6 +11,7 @@ import { GetPosition } from 'services/position';
 import { RegisterUser } from 'services/register';
 import cls from './Content.module.scss'
 
+
 const Content = () => {
     const router = useRouter()
 
@@ -24,10 +25,11 @@ const Content = () => {
     const [dataPositon, setDataPositon] = useState([])
     const [phone, setPhone] = useState()
     const [Inputvalue, setInputValue] = useState()
-
+    const [loader, setLoader] = useState(false)
 
 
     const handelRegistor = async () => {
+
         const formData = new FormData()
         formData.append("name", name)
         formData.append("password", password)
@@ -37,13 +39,20 @@ const Content = () => {
         formData.append("file", file)
         formData.append("phone", phone)
 
-        const res = await RegisterUser(formData)
-        if (res.status == 201) {
-            alert("resitor seccesfull, Please canfig email")
-            router.push('/auth/login')
-        } else {
-            alert('failed')
-        }
+        setLoader(true)
+        await RegisterUser(formData)
+            .then(data => {
+                if (data.status == 201) {
+                    setLoader(false)
+                    alert("resitor seccesfull, Please canfig your email")
+                    router.push('/auth/login')
+                } else {
+                    setLoader(false)
+                    alert('failed')
+                }
+            })
+            .catch(err => alert(err.message))
+
     };
 
     useEffect(() => {
@@ -63,50 +72,55 @@ const Content = () => {
             setFile(e.target.files[0])
         }
     }
-
-
     return (
-        <div className={cls.content}>
-            <Container>
-                <div className={cls.content__title}>
-                    <h3>Зарегистрироваться</h3>
-                    <div>
-                        <span>Есть аккаунт?</span>
-                        <RoundedButton onClick={() => router.push('/auth/login')}>Войти</RoundedButton>
+        <>
+            {
+                loader ? <div className={cls.loader}>
+                    <img src="/b4d657e7ef262b88eb5f7ac021edda87.gif" />
+                </div> : ""
+            }
+            <div className={cls.content}>
+                <Container>
+                    <div className={cls.content__title}>
+                        <h3>Зарегистрироваться</h3>
+                        <div>
+                            <span>Есть аккаунт?</span>
+                            <RoundedButton onClick={() => router.push('/auth/login')}>Войти</RoundedButton>
+                        </div>
                     </div>
-                </div>
-                <div className={cls.content__form}>
-                    <PhotoUpload onChange={hendleimg} img={file} />
+                    <div className={cls.content__form}>
+                        <PhotoUpload onChange={hendleimg} img={file} />
 
-                    <div className={cls.content__form__inputs}>
-                        <div>
-                            <Input placeholder='ФИО' onChange={(e) => setName(e.target.value)} />
-                            <Input placeholder='Должность' withData={true} value={Inputvalue} onClick={(title, id) => {
-                                setInputValue(title)
-                                setPosition(id)
+                        <div className={cls.content__form__inputs}>
+                            <div>
+                                <Input placeholder='ФИО' onChange={(e) => setName(e.target.value)} />
+                                <Input placeholder='Должность' withData={true} value={Inputvalue} onClick={(title, id) => {
+                                    setInputValue(title)
+                                    setPosition(id)
 
-                            }} onChange={(e, positionId) => {
-                                setInputValue(e.target.value)
-                                setPosition(positionId)
-                            }} data={dataPositon} />
-                        </div>
-                        <div>
-                            <Input placeholder='example@gmail.com' type='email' onChange={(e) => setEmail(e.target.value)} />
-                            <Input placeholder='Пароль' type='password' onChange={(e) => setPassword(e.target.value)} />
-                        </div>
-                        <div>
-                            <Input placeholder='+998 (_ _) _ _ _    _ _    _ _' type='number' onChange={(e) => setPhone(e.target.value)} />
+                                }} onChange={(e, positionId) => {
+                                    setInputValue(e.target.value)
+                                    setPosition(positionId)
+                                }} data={dataPositon} />
+                            </div>
+                            <div>
+                                <Input placeholder='example@gmail.com' type='email' onChange={(e) => setEmail(e.target.value)} />
+                                <Input placeholder='Пароль' type='password' onChange={(e) => setPassword(e.target.value)} />
+                            </div>
+                            <div>
+                                <Input placeholder='+998 (_ _) _ _ _    _ _    _ _' type='number' onChange={(e) => setPhone(e.target.value)} />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <AnimatedBorder>
-                    <div className={cls.content__line}>
-                        <span>Зарегистрироваться</span>
-                        <button onClick={handleSubmit(handelRegistor)}><RightArrow /></button>
-                    </div>
-                </AnimatedBorder>
-            </Container>
-        </div>
+                    <AnimatedBorder>
+                        <div className={cls.content__line}>
+                            <span>Зарегистрироваться</span>
+                            <button onClick={handleSubmit(handelRegistor)}><RightArrow /></button>
+                        </div>
+                    </AnimatedBorder>
+                </Container>
+            </div>
+        </>
     );
 }
 

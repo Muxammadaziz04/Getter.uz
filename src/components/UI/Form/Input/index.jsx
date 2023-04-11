@@ -36,6 +36,7 @@ const Input = ({
                 type={type}
                 placeholder={placeholder}
                 ref={inputRef}
+
                 {...{ [value && 'value']: value }}
                 onChange={(e) => {
                     setFilteredData(data?.filter(data => data?.title?.toLowerCase().includes(e.target.value?.toLowerCase()))

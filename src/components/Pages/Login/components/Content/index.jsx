@@ -10,53 +10,76 @@ import { useForm } from 'react-hook-form';
 import { loginUser } from 'services/register';
 import cls from './Content.module.scss'
 import { getCookie, setCookie } from 'cookies-next';
+import toast, { Toaster } from 'react-hot-toast';
+import Loader from 'components/UI/loader/Loader';
+
 const Content = () => {
     const { register, handleSubmit, control, formState: { errors } } = useForm();
     const router = useRouter();
     const [password, setPassword] = useState()
     const [email, setEmail] = useState()
-
+    const [loader, setLoader] = useState(false)
     const handelRegistor = async () => {
+        setLoader(true)
+        await loginUser({ password: password, email: email })
+            .then(res => {
+                if (res.status == 200) {
+                    setLoader(false)
+                    setCookie("accessToken", res.data.accessToken)
+                    setCookie("user_id", res.data.userId)
+                    setCookie("refreshToken", res.data.refreshToken)
+                    toast("login seccesfull")
+                    router.push('/')
+                } else {
+                    if (res?.response) {
+                        setLoader(false)
+                        toast(res.response.data.message)
+                    }
+                    else {
+                        setLoader(false)
+                        toast('failed')
+                    }
+                }
+            })
+            .catch(err => {
+                setLoader(false)
+                toast(err.message)
+            })
 
-        const res = await loginUser({ password: password, email: email })
-
-        if (res.status == 200) {
-            setCookie("accessToken", res.data.accessToken)
-            setCookie("user_id", res.data.userId)
-            setCookie("refreshToken", res.data.refreshToken)
-            alert("login seccesfull")
-            router.push('/')
-        } else {
-            alert('failed')
-        }
     };
     return (
-        <div className={cls.content}>
-            <Container>
-                <div className={cls.content__title}>
-                    <h3>Войти</h3>
-                    <div>
-                        <span>Нет аккаунта?</span>
-                        <RoundedButton>Зарегистрироваться</RoundedButton>
-
-                    </div>
-                </div>
-                <div className={cls.content__form}>
-                    <div className={cls.content__form__inputs}>
+        <>
+            {
+                loader ? <Loader /> : ""
+            }
+            <div className={cls.content}>
+                <Container>
+                    <div className={cls.content__title}>
+                        <h3>Войти</h3>
                         <div>
-                            <Input onChange={(e) => setEmail(e.target.value)} placeholder='example@gmail.com' type='email' />
-                            <Input onChange={(e) => setPassword(e.target.value)} placeholder='Пароль' type='password' />
+                            <span>Нет аккаунта?</span>
+                            <RoundedButton>Зарегистрироваться</RoundedButton>
+
                         </div>
                     </div>
-                </div>
-                <AnimatedBorder>
-                    <div className={cls.content__line}>
-                        <span>Войти</span>
-                        <button onClick={handleSubmit(handelRegistor)}><RightArrow /></button>
+                    <div className={cls.content__form}>
+                        <div className={cls.content__form__inputs}>
+                            <div>
+                                <Input onChange={(e) => setEmail(e.target.value)} placeholder='example@gmail.com' type='email' />
+                                <Input onChange={(e) => setPassword(e.target.value)} placeholder='Пароль' type='password' />
+                            </div>
+                        </div>
                     </div>
-                </AnimatedBorder>
-            </Container>
-        </div>
+                    <Toaster />
+                    <AnimatedBorder>
+                        <button className={cls.content__line}>
+                            <span>Войти</span>
+                            <div onClick={handleSubmit(handelRegistor)}><RightArrow /></div>
+                        </button>
+                    </AnimatedBorder>
+                </Container>
+            </div>
+        </>
     );
 }
 

@@ -10,7 +10,8 @@ import { useForm } from 'react-hook-form';
 import { GetPosition } from 'services/position';
 import { RegisterUser } from 'services/register';
 import cls from './Content.module.scss'
-
+import toast, { Toaster } from 'react-hot-toast';
+import Loader from 'components/UI/loader/Loader';
 
 const Content = () => {
     const router = useRouter()
@@ -44,14 +45,24 @@ const Content = () => {
             .then(data => {
                 if (data.status == 201) {
                     setLoader(false)
-                    alert("resitor seccesfull, Please canfig your email")
+                    toast("resitor seccesfull, Please canfig your email")
                     router.push('/auth/login')
                 } else {
-                    setLoader(false)
-                    alert('failed')
+                    if (res?.response) {
+                        setLoader(false)
+                        toast(res.response.data.message)
+                    }
+                    else {
+                        setLoader(false)
+                        toast('failed')
+                    }
                 }
             })
-            .catch(err => alert(err.message))
+            .catch(err => {
+                setLoader(false)
+
+                toast(err.message)
+            })
 
     };
 
@@ -75,10 +86,9 @@ const Content = () => {
     return (
         <>
             {
-                loader ? <div className={cls.loader}>
-                    <img src="/b4d657e7ef262b88eb5f7ac021edda87.gif" />
-                </div> : ""
+                loader ? <Loader /> : ""
             }
+
             <div className={cls.content}>
                 <Container>
                     <div className={cls.content__title}>
@@ -108,15 +118,22 @@ const Content = () => {
                                 <Input placeholder='Пароль' type='password' onChange={(e) => setPassword(e.target.value)} />
                             </div>
                             <div>
-                                <Input placeholder='+998 (_ _) _ _ _    _ _    _ _' type='number' onChange={(e) => setPhone(e.target.value)} />
+                                <Input placeholder='+998 (_ _) _ _ _    _ _    _ _' type='text' value={phone} onChange={e => {
+                                    if (e.target.value !== "+" && e.target.value.length == 1) {
+                                        setPhone('+998' + e.target.value)
+                                    } else if (e.target.value.length <= 13) {
+                                        setPhone(e.target.value)
+                                    }
+                                }} />
                             </div>
                         </div>
                     </div>
+                    <Toaster />
                     <AnimatedBorder>
-                        <div className={cls.content__line}>
+                        <button onClick={handleSubmit(handelRegistor)} className={cls.content__line}>
                             <span>Зарегистрироваться</span>
-                            <button onClick={handleSubmit(handelRegistor)}><RightArrow /></button>
-                        </div>
+                            <div><RightArrow /></div>
+                        </button>
                     </AnimatedBorder>
                 </Container>
             </div>

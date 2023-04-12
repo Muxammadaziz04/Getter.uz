@@ -1,6 +1,6 @@
 .aside {
     width: 100%;
-    height: 100%;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,8 @@
         align-items: flex-start;
         gap: 30px;
 
-        &__item, &__item > ul > li {
+        &__item,
+        &__item>ul>li {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -26,7 +27,7 @@
                 font-size: 18px;
                 line-height: 25px;
 
-                &:hover{
+                &:hover {
                     color: #7000FF;
                 }
             }
@@ -41,7 +42,7 @@
                     align-items: center;
                     padding-left: 28px;
 
-                    & > span{
+                    &>span {
                         font-size: 13px;
                         line-height: 18px;
                         color: black;
@@ -51,7 +52,7 @@
         }
     }
 
-    &__btn{
+    &__btn {
         margin-top: auto;
         display: flex;
         align-items: center;

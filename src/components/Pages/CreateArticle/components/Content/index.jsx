@@ -12,9 +12,10 @@ import { useForm } from 'react-hook-form';
 import { getCookie } from 'cookies-next';
 import { createArticles } from 'services/articles';
 import { useRouter } from 'next/router';
+import toast, { Toaster } from 'react-hot-toast';
+import SelectInput from '../select/Select';
 
 const RichText = dynamic(() => import('components/UI/Form/RichText'), { ssr: false });
-
 const Content = () => {
     const [loading, setloading] = useState(false)
     const [imgFile, setImgFile] = useState()
@@ -26,10 +27,9 @@ const Content = () => {
     const [categoriesId, setCategoryId] = useState(0)
     const cooks = getCookie('user_id')
     const { handleSubmit } = useForm();
-
     const router = useRouter()
-    const hendleArticli = async () => {
 
+    const hendleArticli = async () => {
         const formData = new FormData()
         formData.append("file", imgFile)
         formData.append("title", title)
@@ -41,28 +41,30 @@ const Content = () => {
         }
         formData.append("category", categoriesId)
         formData.append("user", cooks)
-
         setloading(true)
-
         await createArticles(formData)
             .then((response) => {
                 if (response.status == 200 || response.status == 201) {
                     setloading(false)
-                    alert("item creates")
+                    toast("item creates")
                     router.push('/profile')
                 } else {
-                    setloading(false)
-                    alert("failed ")
-                }
-                if (response?.response) {
-                    if (response.response.status == 401) {
-                        removeCookie('accessToken')
+                    if (response?.response) {
+                        if (response.response.status == 401) {
+                            setloading(false)
+                            removeCookie('accessToken')
+                            toast(response.response.data.message)
+                        }
+                        toast(response.response.data.message)
+                    } else {
+                        setloading(false)
+                        toast("failed")
                     }
                 }
             })
             .catch(error => {
                 setloading(false)
-                alert(error.message)
+                toast(error.message)
             })
     }
 
@@ -70,7 +72,6 @@ const Content = () => {
         const fetcCategory = async () => {
             const data = await GetCategory();
             setCAtegory(data?.items)
-
         }
 
         fetcCategory()
@@ -94,14 +95,12 @@ const Content = () => {
             <div className={cls.content__form}>
                 <div className={cls.content__form__elements}>
                     <div className={cls.content__form__inputs}>
-                        {category ? <select className={cls.content__form__inputselect} name="id" id="cars" onChange={(e) => setCategoryId(e.target.value)}>
-                            <option selected disabled value={categoriesId}>Выберите категории</option>
-                            {category?.map((e) => (
-                                <option key={e?.id} value={e?.id} >{e?.title}</option>
-                            ))}
-                        </select> : ""}
 
-                        <DataInput placeholder='# Добавить хэштег' data={tag} value={tagtext} onChange={(e) => {
+                        {category ? <SelectInput categories={category} onChange={(id) => setCategoryId(id)} /> : ""}
+
+
+
+                        <DataInput placeholder='#Добавить хэштег' data={tag} value={tagtext} onChange={(e) => {
                             console.log(e.target.value.length)
                             if (e.target.value.length == 1 && e.target.value !== "#") {
                                 setTagtext("#" + e.target.value)
@@ -109,6 +108,7 @@ const Content = () => {
                                 setTagtext(e.target.value)
                             }
                         }}
+
                             onKeyDown={(e) => {
 
                                 if (e.keyCode === 13) {
@@ -119,7 +119,7 @@ const Content = () => {
                             }} />
                     </div>
                     <div>
-                        <TextArea onChange={(e) => setTitle(e.target.value)} />
+                        <TextArea placeholder='Загаловка Статьи' onChange={(e) => setTitle(e.target.value)} />
                     </div>
                     <div>
                         <RichText onModelChange={(e) => setDisc(e)} />
@@ -128,14 +128,20 @@ const Content = () => {
                 <div className={cls.content__form__img}>
                     <label>
                         <input style={{ "display": "none" }} type={"file"} onChange={hendleimg} accept='image/*' />
-                        <Image src={imgFile ? URL.createObjectURL(imgFile) : '/icon.svg'} alt="" width={254} height={179} />
-                        {/* <Image src={""} alt="" width={60} /> */}
+                        {imgFile ? <Image src={imgFile ? URL.createObjectURL(imgFile) : ''} alt="" width={326} height={250} /> : <div className={cls.content__form__div}>
+                            <Image src='/Group48098535.svg' alt="" width={60} height={60} />
+                        </div>
+                        }
                     </label>
                 </div>
             </div>
+            <Toaster />
             <BlackBorderButton onClick={handleSubmit(hendleArticli)}>Опубликовать </BlackBorderButton>
         </div>
     );
 }
+
+
+
 
 export default Content;

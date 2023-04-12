@@ -1,33 +1,35 @@
-
-.content{
+.content {
     display: flex;
     align-items: flex-start;
     gap: 38px;
 
-    &__btns{
+
+    &__btns {
         display: flex;
         flex-direction: column;
         gap: 16px;
     }
 
-    &__wrapper{
+    &__wrapper {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        width: 100%;
+        max-width: 690px;
     }
 
-    &__title{
+    &__title {
         font-weight: 600;
         font-size: 48px;
         line-height: 48px;
     }
 
-    &__date{
+    &__date {
         display: flex;
         align-items: center;
         gap: 37px;
 
-        & > span{
+        &>span {
             font-size: 14px;
             line-height: 19px;
 
@@ -35,7 +37,7 @@
                 opacity: 0.28;
                 position: relative;
 
-                &::before{
+                &::before {
                     content: '';
                     width: 8px;
                     height: 8px;
@@ -50,31 +52,31 @@
         }
     }
 
-    &__img{
+    &__img {
         width: 100%;
         aspect-ratio: 69/38;
         position: relative;
     }
 
-    &__text{
+    &__text {
         display: flex;
         flex-direction: column;
         gap: 32px;
         padding-bottom: 42px;
         border-bottom: 1px solid rgba(166, 165, 190, 0.2);
 
-        & > h3{
+        &>h3 {
             font-weight: 600;
             font-size: 28px;
             line-height: 38px;
         }
 
-        & > p{
+        &>p {
             font-size: 18px;
             line-height: 150%;
         }
 
-        & > ul{
+        &>ul {
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -83,13 +85,13 @@
         }
     }
 
-    &__comments{
+    &__comments {
         display: flex;
         flex-direction: column;
         gap: 31px;
         align-items: flex-start;
 
-        & > span{
+        &>span {
             font-weight: 500;
             font-size: 13px;
             line-height: 18px;
@@ -97,26 +99,26 @@
             opacity: 0.4;
         }
 
-        &__list{
+        &__list {
             display: flex;
             flex-direction: column;
             gap: 22px;
         }
     }
 
-    &__input{
+    &__input {
         display: flex;
         flex-direction: column;
         gap: 17px;
 
-        & > label{
+        &>label {
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-bottom: 2px solid #7000FF;
             gap: 23px;
 
-            & > input{
+            &>input {
                 padding: 25px 0;
                 font-weight: 500;
                 font-size: 16px;
@@ -125,12 +127,13 @@
                 border: none;
                 outline: none;
                 flex-grow: 1;
-                &::placeholder{
+
+                &::placeholder {
                     opacity: 0.4;
                 }
             }
 
-            & > button{
+            &>button {
                 font-weight: 600;
                 font-size: 17px;
                 line-height: 23px;

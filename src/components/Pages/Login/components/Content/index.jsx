@@ -29,7 +29,7 @@ const Content = () => {
                     setCookie("user_id", res.data.userId)
                     setCookie("refreshToken", res.data.refreshToken)
                     toast("login seccesfull")
-                    router.push('/')
+                    router.push('/profile')
                 } else {
                     if (res?.response) {
                         setLoader(false)

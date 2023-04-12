@@ -25,7 +25,9 @@ const LeftAside = () => {
                 removeCookies('refresh_token_user')
                 removeCookies('user_id')
                 removeCookies('access_token_user')
-                router.push('/')
+                removeCookies('refreshToken')
+                removeCookies('accessToken')
+                router.push('/auth/login')
             }}>
                 <ExitIcon /> Выйти
             </button>

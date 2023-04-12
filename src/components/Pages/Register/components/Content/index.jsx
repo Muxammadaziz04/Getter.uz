@@ -48,9 +48,9 @@ const Content = () => {
                     toast("resitor seccesfull, Please canfig your email")
                     router.push('/auth/login')
                 } else {
-                    if (res?.response) {
+                    if (data?.response) {
                         setLoader(false)
-                        toast(res.response.data.message)
+                        toast(data?.response.data.message)
                     }
                     else {
                         setLoader(false)

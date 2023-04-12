@@ -99,7 +99,6 @@ const Content = () => {
                         {category ? <SelectInput categories={category} onChange={(id) => setCategoryId(id)} /> : ""}
 
 
-
                         <DataInput placeholder='#Добавить хэштег' data={tag} value={tagtext} onChange={(e) => {
                             console.log(e.target.value.length)
                             if (e.target.value.length == 1 && e.target.value !== "#") {
@@ -121,10 +120,9 @@ const Content = () => {
                     <div>
                         <TextArea placeholder='Загаловка Статьи' onChange={(e) => setTitle(e.target.value)} />
                     </div>
-                    <div>
-                        <RichText onModelChange={(e) => setDisc(e)} />
-                    </div>
+
                 </div>
+
                 <div className={cls.content__form__img}>
                     <label>
                         <input style={{ "display": "none" }} type={"file"} onChange={hendleimg} accept='image/*' />
@@ -134,6 +132,9 @@ const Content = () => {
                         }
                     </label>
                 </div>
+            </div>
+            <div className={cls.RichText} >
+                <RichText onModelChange={(e) => setDisc(e)} />
             </div>
             <Toaster />
             <BlackBorderButton onClick={handleSubmit(hendleArticli)}>Опубликовать </BlackBorderButton>

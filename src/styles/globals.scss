@@ -66,3 +66,32 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.fr-toolbar.fr-top {
+  border: none !important;
+}
+
+.fr-box.fr-basic.fr-top .fr-wrapper {
+  border: none;
+}
+
+.fr-second-toolbar {
+  border: none !important;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.7) !important;
+  border-radius: 0px !important;
+}
+
+.fr-box.fr-basic .fr-element {
+  min-height: 50px !important;
+  padding-bottom: 10px !important;
+  padding-left: 0px !important;
+}
+
+
+.fr-box .fr-counter {
+  display: none;
+}
+
+.fr-toolbar .fr-newline {
+  display: none !important;
+}

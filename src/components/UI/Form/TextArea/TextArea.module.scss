@@ -1,7 +1,8 @@
-
-.area{
+.area {
     width: 100%;
     padding: 8px 0;
+    min-height: 77px;
+    max-height: 160px;
     border: none;
     resize: none;
     outline: none;
@@ -10,7 +11,8 @@
     font-size: 24px;
     line-height: 30px;
     font-family: 'Inter';
-    &::-webkit-scrollbar{
+
+    &::-webkit-scrollbar {
         width: 0;
     }
 }

@@ -15,7 +15,6 @@ import { getCookie } from 'cookies-next';
 const Header = () => {
     const router = useRouter()
     const [colorChanget, setColorChanget] = useState(false)
-
     const query = router?.asPath.split('?')?.[1]?.split('=')?.[1]
     const token = getCookie('accessToken')
     useEffect(() => {
@@ -37,37 +36,29 @@ const Header = () => {
         <>
             <div className={cls.wrapper}>
                 <div className={cls.header}>
-                    <Navbar links={navLinks} />
-                    <div>
-                        <Container>
+
+                    <Container className={cls.header__container}>
+                        <div>
                             <h1 className={cls.header__title}>Создаем сайты и айдентику от всей <span>души</span> </h1>
-                        </Container>
-                    </div>
-                    <AnimatedBorder className={cls.header__rowblock}>
-                        <Container>
-                            <h3 className={cls.header__rowblock__text}>Давайте обсудим и ваш проект</h3>
-                            <div className={cls.header__rowblock__avatars}>
-                                {
-                                    avatars.length > 0 && avatars.map((ava, index) =>
-                                        <Avatar
-                                            key={ava.id}
-                                            src={ava.image}
-                                            fullName={ava.fullName}
-                                            job={ava.job}
-                                            style={{ transform: `translateX(-${index * 14}px)` }}
-                                            className={cls.header__ava}
-                                            onMouseEnter={(e) => e.target.closest('div').style = `transform: translateX(-${index * 14}px) scale(1.3);`}
-                                            onMouseLeave={(e) => e.target.closest('div.ava').style = `transform: translateX(-${index * 14}px);`}
-                                        />
-                                    )
-                                }
-                            </div>
-                            <div style={{ paddingLeft: '50px' }}>
-                                <RightArrow />
-                            </div>
-                        </Container>
-                    </AnimatedBorder>
-                    <AnimatedCircle />
+                            <h3 className={cls.header__text}>Давайте обсудим и ваш проект</h3>
+                        </div>
+                        <div className={cls.header__rowblock__avatars}>
+                            {
+                                avatars.length > 0 && avatars.map((ava, index) =>
+                                    <Avatar
+                                        key={ava.id}
+                                        src={ava.image}
+                                        fullName={ava.fullName}
+                                        job={ava.job}
+                                        className={cls.header__ava}
+                                    />
+                                )
+                            }
+                        </div>
+
+
+
+                    </Container>
                 </div>
             </div>
             <div className={`${cls.header__btns} ${colorChanget ? cls.active__nav : ''}`}>
@@ -75,7 +66,7 @@ const Header = () => {
                     <Container>
                         <Link href='/recomend-site'>
                             <a
-                                style={(query === undefined) && !colorChanget ? { opacity: "1", color: 'white' } : {}}
+                                style={(query === undefined) && !colorChanget ? { opacity: "1", color: 'black' } : {}}
                                 className={(query === undefined) && colorChanget ? cls.active__link : ''}
                             >
                                 <span><PlusIcon /></span>
@@ -84,7 +75,7 @@ const Header = () => {
                         </Link>
                         <Link href='/order-project'>
                             <a
-                                style={(query === 'portfolio') && !colorChanget ? { opacity: "1", color: 'white' } : {}}
+                                style={(query === 'portfolio') && !colorChanget ? { opacity: "1", color: 'black' } : {}}
                                 className={(query === 'portfolio') && colorChanget ? cls.active__link : ''}
                             >
                                 <span><PlusIcon /></span>
@@ -95,7 +86,7 @@ const Header = () => {
                             token ?
                                 <Link href='/create-article'>
                                     <a
-                                        style={(query === 'articles') && !colorChanget ? { opacity: "1", color: 'white' } : {}}
+                                        style={(query === 'articles') && !colorChanget ? { opacity: "1", color: 'black' } : {}}
                                         className={(query === 'articles') && colorChanget ? cls.active__link : ''}
                                     >
                                         <span><PlusIcon /></span>
@@ -104,7 +95,7 @@ const Header = () => {
                                 </Link> :
                                 <Link href='/auth/register'>
                                     <a
-                                        style={(query === 'articles') && !colorChanget ? { opacity: "1", color: 'white' } : {}}
+                                        style={(query === 'articles') && !colorChanget ? { opacity: "1", color: 'black' } : {}}
                                         className={(query === 'articles') && colorChanget ? cls.active__link : ''}
                                     >
                                         <span><PlusIcon /></span>

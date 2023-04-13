@@ -43,6 +43,7 @@ const Content = () => {
         setLoader(true)
         await RegisterUser(formData)
             .then(data => {
+                console.log(data)
                 if (data.status == 201) {
                     setLoader(false)
                     toast("resitor seccesfull, Please canfig your email")
@@ -100,7 +101,6 @@ const Content = () => {
                     </div>
                     <div className={cls.content__form}>
                         <PhotoUpload onChange={hendleimg} img={file} />
-
                         <div className={cls.content__form__inputs}>
                             <div>
                                 <Input placeholder='ФИО' onChange={(e) => setName(e.target.value)} />

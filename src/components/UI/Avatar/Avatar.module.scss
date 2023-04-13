@@ -1,51 +1,57 @@
-
-.ava{
-    width: 68px;
-    height: 68px;
+.ava {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     position: relative;
     cursor: pointer;
     box-sizing: border-box;
     display: flex;
-    & > span{
-        width: 102%!important;
-        height: 102%!important;
-        transform: translate(-1%, -1%)!important;
+
+    &>span {
+        width: 102% !important;
+        height: 102% !important;
+        transform: translate(-1%, -1%) !important;
     }
 }
 
-.ava:hover > .tooltip{
+.ava:hover>.tooltip {
     display: flex;
 }
 
-.tooltip{
+.tooltip {
     display: none;
-    width: auto!important;
-    padding: 10px 40px 10px 15px!important;
+    width: auto !important;
+    padding: 10px 40px 10px 15px !important;
     border-radius: 14px;
     background: white;
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50px;
     z-index: 1000;
-    transform: translateY(140%);
+    transform: translateY(60%);
+    box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.2);
 
-    &>h3{
+    &>h3 {
         white-space: nowrap;
         width: 100%;
         font-weight: 400;
         font-size: 15px;
         line-height: 23px;
     }
-    &>span{
-        font-weight: 500;
-        font-size: 11px;
-        line-height: 15px;
+
+    &>span {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
         text-decoration-line: underline;
+        color: #000000;
     }
-    &::after{
+
+    &::after {
         content: '';
         width: 45px;
         height: 18px;
@@ -56,12 +62,12 @@
         transform: translateY(-100%);
     }
 
-    &__top{
+    &__top {
         top: 0;
         left: 0;
         transform: translateY(-140%);
 
-        &::after{
+        &::after {
             top: auto;
             bottom: 1px;
             transform: translateY(100%) rotateX(180deg);

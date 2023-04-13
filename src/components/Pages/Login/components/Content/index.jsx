@@ -58,7 +58,7 @@ const Content = () => {
                         <h3>Войти</h3>
                         <div>
                             <span>Нет аккаунта?</span>
-                            <RoundedButton>Зарегистрироваться</RoundedButton>
+                            <RoundedButton onClick={() => router.push('/auth/register')}>Зарегистрироваться</RoundedButton>
 
                         </div>
                     </div>

@@ -6,7 +6,7 @@ import cls from './Login.module.scss'
 const Login = () => {
     return (
         <div className={cls.page}>
-            <Navbar />
+            {/* <Navbar /> */}
             <Content />
             <AnimatedCircle />
         </div>

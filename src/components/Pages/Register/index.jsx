@@ -6,7 +6,7 @@ import cls from './Register.module.scss'
 const Register = () => {
     return (
         <div className={cls.page}>
-            <Navbar />
+
             <Content />
             <AnimatedCircle />
         </div>

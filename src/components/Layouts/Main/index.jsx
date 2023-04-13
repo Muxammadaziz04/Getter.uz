@@ -17,12 +17,12 @@ const allowFooter = [
     '/auth/register'
 ]
 
-const MainLayout = ({children}) => {
+const MainLayout = ({ children }) => {
     const router = useRouter()
-    
+
     return (
         <div className={cls.main}>
-            {!allowNav.includes(router.pathname) && <Navbar links={navLinks} whiteMode={true}/>}
+            <Navbar links={navLinks} whiteMode={true} />
             <div className={cls.main__content}>
                 {children}
             </div>

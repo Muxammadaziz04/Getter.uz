@@ -12,34 +12,42 @@
     }
 
     &__title {
-        margin: 7px 0;
-        position: relative;
-        z-index: 9;
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 64px;
-        line-height: 81px;
-        letter-spacing: -0.05em;
-        color: #121212;
+        display: flex;
+        align-items: flex-end;
 
-        max-width: 764px;
+        h1 {
+            // font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 110px;
+            line-height: 139px;
+            letter-spacing: 0.08em;
+            color: #121212;
+        }
+
 
         &>span {
-            font-family: 'Times';
-            font-style: italic;
+            // font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 81px;
+            letter-spacing: -0.05em;
+            color: #121212;
+            transform: translateX(-30px) translateY(-10px);
+
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background: url('/line.svg');
-            width: 263px;
-            height: 32px;
-            transform: translateY(calc(100% + 10px)) translateX(20%);
-        }
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: 0;
+        //     right: 0;
+        //     background: url('/line.svg');
+        //     width: 263px;
+        //     height: 32px;
+        //     transform: translateY(calc(100% + 10px)) translateX(20%);
+        // }
     }
 
     &__text {
@@ -50,14 +58,19 @@
         line-height: 18px;
         color: #121212;
         margin-bottom: 27px;
+        margin-left: 32px;
 
+    }
+
+    &__img {
+        margin-left: 32px !important;
     }
 
     &__rowblock {
         margin: 30px 0;
         position: relative;
         z-index: 100;
-
+        width: 140px;
 
         &__text {
             font-size: 32px;
@@ -69,10 +82,22 @@
         &__avatars {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            // justify-content: space-between;
             flex-wrap: wrap;
+            flex-direction: row-reverse;
+            gap: 5px;
             width: 100%;
             max-width: 720px;
+        }
+
+        &__avatarsPlus {
+            background: #7000FF;
+            border-radius: 1000px;
+            height: 140px;
+            width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 

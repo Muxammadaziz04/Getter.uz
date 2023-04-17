@@ -1,68 +1,75 @@
 export const avatars = [
     {
-        id: 6,
-        image: '/avatars/abbos_janizakov.png',
-        fullName: 'Abbos Janizakov',
-        job: 'Designer, CEO'
-    },
-    {
-        id: 5,
-        image: '/avatars/shaxboz_samadov.png',
-        fullName: 'Samadov Shaxboz',
-        job: 'Designer, PM'
-    },
-    {
-        id: 0,
-        image: '/avatars/abdulloh.png',
-        fullName: 'Abdulloh Xolmurodov',
-        job: 'PM'
+        id: 7,
+        image: '/avatars/yorqin.png',
+        fullName: 'Yuldashiv Yorqin',
+        job: 'Designer'
     },
     {
         id: 9,
-        image: '/avatars/shaxriyor_oripov.png',
+        image: '/avatars/shahriyor.png',
         fullName: 'Oripov Shaxriyor',
         job: 'Designer'
     },
     {
-        id: 7,
-        image: '/avatars/mirsaid_boltayev.png',
-        fullName: 'Boltaev Mirsaid',
-        job: 'Designer'
+        id: 0,
+        image: '/avatars/Abdullohpng.png',
+        fullName: 'Abdulloh Xolmurodov',
+        job: 'PM'
+    },
+    {
+        id: 5,
+        image: '/avatars/Shahboz.png',
+        fullName: 'Samadov Shaxboz',
+        job: 'Designer, PM'
+    },
+    {
+        id: 6,
+        image: '/avatars/abbos.png',
+        fullName: 'Abbos Janizakov',
+        job: 'Designer, CEO'
     },
     {
         id: 1,
-        image: '/avatars/davron_ikromov.png',
+        image: '/avatars/davron.png',
         fullName: 'Ikromov Davron',
         job: 'Designer'
     },
     {
         id: 10,
-        image: '/avatars/abdugani_abduqaxxorov.png',
+        image: '/avatars/Abduganiy.png',
         fullName: 'Abduqahhorov Abdug\'aniy',
         job: 'Full Stack developer'
     },
     {
         id: 8,
-        image: '/avatars/abdullajon_ibroximov.png',
+        image: '/avatars/Abdulloh.png',
         fullName: 'Ibroximov Abdullajon',
         job: 'Frontend developer'
     },
     {
         id: 3,
-        image: '/avatars/jaloliddin_nasrullayev.png',
+        image: '/avatars/Jaloliddin.png',
         fullName: 'Nasrullayev Jaloliddin',
         job: 'Backend developer'
     },
     {
         id: 4,
-        image: '/avatars/shaxzod_ibrohimov.png',
-        fullName: 'Ibrohimov Shahzod',
+        image: '/avatars/firdavs.png',
+        fullName: 'Muzafarov Firdavs',
         job: 'Backend developer'
     },
     {
         id: 2,
-        image: '/avatars/abubakir_jalolov.png',
+        image: '/avatars/Abubakir.png',
         fullName: 'Jalolov Abubakir',
         job: 'Backend developer'
     },
+    {
+        id: 11,
+        image: '/avatars/Abdulaziz.png',
+        fullName: 'Karimov Abdulaziz',
+        job: 'Backend developer'
+    },
+    
 ]

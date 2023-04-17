@@ -5,12 +5,13 @@ import AnimatedBorder from 'components/UI/AnimatedBorder';
 import AnimatedCircle from 'components/UI/AnimatedCircle';
 import Avatar from 'components/UI/Avatar';
 import Container from 'components/UI/Container';
-import { PlusIcon, RightArrow } from 'components/UI/icons';
+import { AvatarAdd, PlusIcon, RightArrow } from 'components/UI/icons';
 import Navbar from 'components/UI/Navbar';
 import { navLinks } from '../../../../Layouts/Main/data';
 import { avatars } from './data';
 import cls from './Header.module.scss'
 import { getCookie } from 'cookies-next';
+import Image from 'next/image';
 
 const Header = () => {
     const router = useRouter()
@@ -39,8 +40,9 @@ const Header = () => {
 
                     <Container className={cls.header__container}>
                         <div>
-                            <h1 className={cls.header__title}>Создаем сайты и айдентику от всей <span>души</span> </h1>
+                            <div className={cls.header__title}><h1>V</h1> <span>aaaaaoooouuv!</span> </div>
                             <h3 className={cls.header__text}>Давайте обсудим и ваш проект</h3>
+                            <div className={cls.header__img} ><Image src="/good.png" alt="alt" width={32} height={32} /></div>
                         </div>
                         <div className={cls.header__rowblock__avatars}>
                             {
@@ -54,6 +56,9 @@ const Header = () => {
                                     />
                                 )
                             }
+                            {/* <div className={cls.header__rowblock__avatarsPlus}>
+                                <AvatarAdd />
+                            </div> */}
                         </div>
 
 

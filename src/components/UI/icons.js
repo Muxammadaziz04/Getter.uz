@@ -115,9 +115,11 @@ export function RightArrow() {
 
 export function PlusIcon() {
     return (
-        <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.0620001 5.708V4.25H7.694V5.708H0.0620001ZM3.14 0.973999H4.634V8.984H3.14V0.973999Z" fill="white" />
+        <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle opacity="0.2" cx="10" cy="12" r="10" fill="#121212"/>
+        <path d="M6.062 12.708V11.25H13.694V12.708H6.062ZM9.14 7.974H10.634V15.984H9.14V7.974Z" fill="#121212"/>
         </svg>
+        
     )
 }
 
@@ -320,5 +322,15 @@ export function ExitIcon() {
         <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M8 0V7H10V2H22V18H10V13H8V20H24V0H8ZM6 9V5L0 10L6 15V11H16V9H6Z" fill="black" />
         </svg>
+    )
+}
+
+export function AvatarAdd() {
+    return (
+        <svg width="46" height="45" viewBox="0 0 46 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.3142 22.4898H45.42C44.4867 22.4158 43.4369 22.4084 42.3142 22.4898ZM42.3142 22.4898C34.4466 23.0605 23 27.9966 23 45M42.3142 22.5102H45.42C44.4867 22.5842 43.4369 22.5916 42.3142 22.5102ZM42.3142 22.5102C34.4466 21.9395 23 17.0034 23 0" stroke="white" stroke-width="2"/>
+<path d="M4.10576 22.4898H0.999924C1.93321 22.4158 2.98304 22.4084 4.10576 22.4898ZM4.10576 22.4898C11.9733 23.0605 23.4199 27.9966 23.4199 45M4.10576 22.5102H0.999924C1.93321 22.5842 2.98304 22.5916 4.10576 22.5102ZM4.10576 22.5102C11.9733 21.9395 23.4199 17.0034 23.4199 0" stroke="white" stroke-width="2"/>
+</svg>
+
     )
 }

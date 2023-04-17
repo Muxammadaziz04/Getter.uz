@@ -5,7 +5,6 @@ import { navLinks, footerLinks, contacts } from "./data";
 import cls from './Main.module.scss'
 
 const allowNav = [
-    '/',
     '/profile',
     '/create-article',
     '/auth/login',
@@ -22,7 +21,7 @@ const MainLayout = ({ children }) => {
 
     return (
         <div className={cls.main}>
-            <Navbar links={navLinks} whiteMode={true} />
+            {!allowNav.includes(router.pathname) && <Navbar links={navLinks} whiteMode={true} />}
             <div className={cls.main__content}>
                 {children}
             </div>
